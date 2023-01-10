@@ -1,0 +1,9 @@
+/* Button Styles */
+
+@mixin btn-red {
+  margin: 0;
+  padding: 20px;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+}

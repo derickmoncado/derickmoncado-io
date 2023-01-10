@@ -1,0 +1,19 @@
+/* Header Styles */
+
+header {
+  background: #efefef;
+
+  .dropdown-menu {
+    
+    li {
+
+      a {
+        color: rgba(0, 0, 0, 0.55);
+
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+}

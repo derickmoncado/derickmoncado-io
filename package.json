@@ -1,0 +1,46 @@
+{
+  "name": "launchpad",
+  "version": "1.0.0",
+  "description": "Launchpad - A starter kit for front end developers",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/assets/scss/:css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmoncado/launchpad.git"
+  },
+  "author": "Derick Moncado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmoncado/launchpad/issues"
+  },
+  "homepage": "https://github.com/dmoncado/launchpad#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.13",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "del": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-remove-code": "^3.0.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^3.0.0",
+    "node-sass": "^8.0.0",
+    "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "panini": "^1.7.2",
+    "sass": "^1.57.1"
+  }
+}
