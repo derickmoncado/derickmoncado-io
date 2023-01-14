@@ -1,18 +1,15 @@
 /* Header Styles */
 
 header {
-  background: #efefef;
+  background: #f7f7f7;
+  border-bottom: 2px solid #f0eff0;
 
-  .dropdown-menu {
-    
-    li {
+  .navbar {
 
-      a {
-        color: rgba(0, 0, 0, 0.55);
+    .navbar-brand {
 
-        &:hover {
-          color: rgba(0, 0, 0, 1);
-        }
+      img {
+        width: 50px;
       }
     }
   }
