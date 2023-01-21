@@ -1,12 +1,15 @@
 /* Header Styles */
 
 header {
-  background: #f7f7f7;
-  border-bottom: 2px solid #f0eff0;
 
   .navbar {
 
+    .navbar-toggler {
+      border: none;
+    }
+
     .navbar-brand {
+      padding: 5px;
 
       img {
         width: 50px;
