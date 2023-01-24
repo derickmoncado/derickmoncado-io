@@ -1,15 +1,8 @@
 /* Home Page */
 
-.home-body-example {
+#dm-hero {
 
-	.placeholder-content {
-		height: 650px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		p {
-			margin-bottom: 0;
-		}
+	.dm-hero-content {
+		border: 1px solid red;
 	}
 }
