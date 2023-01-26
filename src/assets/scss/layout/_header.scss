@@ -2,48 +2,48 @@
 
 header {
 
-	.navbar {
+    .navbar {
 
-		.navbar-toggler {
-			border: none;
-		}
+        .navbar-toggler {
+            border: none;
+        }
 
-		.navbar-brand {
-			padding: 5px;
+        .navbar-brand {
+            padding: 5px;
 
-			img {
-				width: 50px;
-			}
-		}
+            img {
+                width: 50px;
+            }
+        }
 
-		.navbar-collapse {
+        .navbar-collapse {
 
-			.navbar-nav {
+            .navbar-nav {
 
-				.nav-item {
+                .nav-item {
 
-					.nav-link {
-						color: $grayDark;
-						transition: opacity 0.3s ease;
-					}
-				}
+                    .nav-link {
+                        color: $grayDark;
+                        transition: opacity 0.3s ease;
+                    }
+                }
 
-				&:hover {
+                &:hover {
 
-					li {
+                    li {
 
-						a {
-							opacity: 0.5;
-							transition: opacity 0.3s ease;
+                        a {
+                            opacity: 0.5;
+                            transition: opacity 0.3s ease;
 
-							&:hover {
-								opacity: 1;
-								transition: opacity 0.3s ease;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+                            &:hover {
+                                opacity: 1;
+                                transition: opacity 0.3s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
