@@ -4,6 +4,14 @@
 #dm-hero {
 
 	.dm-hero-content {
-		border: 1px solid $grayDark;
+		border: 5px solid $grayDark;
+
+		&__image {
+			border: 2px solid red;
+		}
+
+		&__details {
+			border: 2px solid red;
+		}
 	}
 }
