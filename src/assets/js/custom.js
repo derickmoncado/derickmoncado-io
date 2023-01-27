@@ -9,7 +9,7 @@
 		el.classList.add('active');
 	});
 
-  // Init Swiper (swiper.js)
+	// Init Swiper (swiper.js)
 	const swiper = new Swiper('.swiper', {
 		loop: true,
 		pagination: {
