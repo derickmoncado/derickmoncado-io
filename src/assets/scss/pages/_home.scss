@@ -8,6 +8,27 @@
 
 		&__image {
 			border: 2px solid red;
+			text-align: center;
+			margin-bottom: 80px;
+			position: relative;
+
+			&__socials {
+				border: 1px solid blue;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+			}
+
+			&__pic {
+				display: inline-block;
+				margin: 0 auto;
+				height: 300px;
+				width: 300px;
+				border-radius: 150px;
+				overflow: hidden;
+				box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+			}
 		}
 
 		&__details {
