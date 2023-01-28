@@ -6,6 +6,8 @@ section {
 
 body {
 	background-color: $yellow;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
 }
 
 img {
@@ -20,5 +22,9 @@ ul {
 }
 
 p {
+	font-size: 18px;
 	margin-bottom: 0;
+	color: $yellowDark;
+	font-weight: 400;
+	letter-spacing: -0.4px;
 }

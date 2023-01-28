@@ -1,11 +1,15 @@
 /* Mixins */
 
-@mixin btn-red {
-	margin: 0;
-	padding: 20px;
-	background-color: red;
-	color: #fff;
-	border-radius: 5px;
+@mixin heading {
+	font-size: 58px;
+	font-weight: bold;
+	letter-spacing: -3px;
+}
+
+@mixin subheading {
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: -1px;
 }
 
 @mixin something-else($bg) {

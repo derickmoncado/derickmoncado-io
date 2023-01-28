@@ -24,14 +24,14 @@
 
 						a {
 							display: inline-block;
-							padding: 4px;
+							padding: 5px;
 							font-size: 18px;
 							color: $grayDark;
 
 							&:hover {
 
 								i {
-									color: lighten($grayDark, 15%);
+									color: lighten($grayDark, 20%);
 									transition: 0.3s ease-in-out;
 								}
 							}
@@ -124,6 +124,31 @@
 
 		&__details {
 			border: 2px solid red;
+
+			span {
+				font-size: 48px;
+			}
+
+			h1 {
+				@include heading;
+			}
+
+			h2 {
+				@include subheading;
+				position: relative;
+				padding-left: 85px;
+
+				&::before {
+					content: '';
+					height: 2px;
+					width: 65px;
+					position: absolute;
+					left: 5px;
+					top: 50%;
+					transform: translateY(-50%);
+					background-color: $grayDark;
+				}
+			}
 		}
 	}
 }
