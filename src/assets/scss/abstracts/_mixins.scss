@@ -12,8 +12,21 @@
 	letter-spacing: -1px;
 }
 
-@mixin something-else($bg) {
+@mixin btn() {
+	display: inline-block;
 	margin: 0;
-	padding: 20px;
-	background-color: $bg;
+	padding: 15px 25px;
+	background-color: $grayDark;
+	font-size: 18px;
+	font-family: inherit;
+	color: $yellow;
+	text-decoration: none;
+	border-radius: 15px;
+	transition: 0.3s ease-in-out;
+
+	&:hover {
+		background-color: lighten($grayDark, 10%);
+		box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+		transition: 0.3s ease-in-out;
+	}
 }

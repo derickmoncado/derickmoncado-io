@@ -149,6 +149,14 @@
 					background-color: $grayDark;
 				}
 			}
+
+			p {
+				margin-bottom: 40px;
+			}
+
+			a {
+				@include btn();
+			}
 		}
 	}
 }
