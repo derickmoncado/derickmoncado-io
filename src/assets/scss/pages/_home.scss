@@ -6,11 +6,24 @@
 	.dm-hero-content {
 		border: 5px solid $grayDark;
 
+		@media all and (min-width: 992px) {
+			display: flex;
+		}
+
 		&__image {
 			border: 2px solid red;
 			text-align: center;
 			margin-bottom: 80px;
 			position: relative;
+
+			@media all and (min-width: 992px) {
+				width: 50%;
+				margin-bottom: 0;
+				order: 1;
+				display: flex;
+				order: 1;
+				align-items: center;
+			}
 
 			&__socials {
 				position: absolute;
@@ -82,7 +95,7 @@
 						}
 					}
 
-					@media screen and (min-width: 992px) {
+					@media all and (min-width: 992px) {
 						position: absolute;
 						width: 40px;
 						height: 40px;
@@ -124,6 +137,10 @@
 
 		&__details {
 			border: 2px solid red;
+
+			@media all and (min-width: 992px) {
+				width: 50%;
+			}
 
 			span {
 				font-size: 48px;
