@@ -30,3 +30,13 @@
 		transition: 0.3s ease-in-out;
 	}
 }
+
+@mixin sm-container {
+	max-width: 992px;
+	margin: 0 auto;
+}
+
+@mixin md-container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
