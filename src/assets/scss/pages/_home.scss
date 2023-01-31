@@ -4,19 +4,23 @@
 #dm-hero {
 
 	.dm-hero-content {
-		border: 5px solid $grayDark;
+		//border: 1px solid $grayDark;
 
-		@media all and (min-width: 992px) {
+		@media (min-width: 992px) {
 			display: flex;
 		}
 
+		@media (min-width: 1200px) {
+			position: relative;
+		}
+
 		&__image {
-			border: 2px solid red;
+			//border: 1px solid red;
 			text-align: center;
 			margin-bottom: 80px;
 			position: relative;
 
-			@media all and (min-width: 992px) {
+			@media (min-width: 992px) {
 				width: 50%;
 				margin-bottom: 0;
 				order: 1;
@@ -25,11 +29,19 @@
 				align-items: center;
 			}
 
+			@media (min-width: 1200px) {
+				position: static;
+			}
+
 			&__socials {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
 				left: 0;
+
+				@media (min-width: 1200px) {
+					left: -125px;
+				}
 
 				ul {
 
@@ -60,6 +72,12 @@
 				width: 300px;
 				position: relative;
 
+				@media (min-width: 1200px) {
+					height: 350px;
+					width: 350px;
+					margin: 10px 0 0 auto;
+				}
+
 				&__frame {
 					position: absolute;
 					width: 100%;
@@ -69,6 +87,10 @@
 					border-radius: 150px;
 					overflow: hidden;
 					box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+
+					@media (min-width: 1200px) {
+						border-radius: 175px;
+					}
 				}
 
 				&__message {
@@ -95,7 +117,7 @@
 						}
 					}
 
-					@media all and (min-width: 992px) {
+					@media (min-width: 992px) {
 						position: absolute;
 						width: 40px;
 						height: 40px;
@@ -131,14 +153,18 @@
 							}
 						}
 					}
+
+					@media (min-width: 1200px) {
+						left: 267px;
+					}
 				}
 			}
 		}
 
 		&__details {
-			border: 2px solid red;
+			//border: 1px solid red;
 
-			@media all and (min-width: 992px) {
+			@media (min-width: 992px) {
 				width: 50%;
 			}
 
