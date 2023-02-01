@@ -44,6 +44,10 @@
 				transform: translateY(-50%);
 				left: 0;
 
+				@media (min-width: 992px) {
+					left: 95%;
+				}
+
 				@media (min-width: 1200px) {
 					left: -125px;
 				}
@@ -143,7 +147,7 @@
 						}
 
 						&:hover {
-							width: 156px;
+							width: 152px;
 
 							p {
 								font-size: 13px;
