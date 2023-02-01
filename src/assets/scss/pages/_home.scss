@@ -2,6 +2,11 @@
 
 // hero
 #dm-hero {
+	padding: 40px 0;
+
+	@media (min-width: 992px) {
+		padding: 120px 0;
+	}
 
 	.dm-hero-content {
 		//border: 1px solid $grayDark;
@@ -110,11 +115,7 @@
 					justify-content: center;
 
 					p {
-						font-size: 12px;
-
-						span {
-							//display: none;
-						}
+						font-size: 13px;
 					}
 
 					@media (min-width: 992px) {
@@ -134,7 +135,7 @@
 						justify-content: center;
 
 						p {
-							font-size: 12px;
+							font-size: 13px;
 
 							span {
 								display: none;
@@ -145,7 +146,7 @@
 							width: 156px;
 
 							p {
-								font-size: 12px;
+								font-size: 13px;
 
 								span {
 									display: inline-block;
@@ -162,7 +163,10 @@
 		}
 
 		&__details {
-			//border: 1px solid red;
+
+			@media (min-width: 768px) {
+				width: 70%;
+			}
 
 			@media (min-width: 992px) {
 				width: 50%;
