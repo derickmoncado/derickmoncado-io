@@ -3,10 +3,14 @@
 // hero
 #dm-hero {
 	padding: 40px 0;
-	height: calc(100vh - 90px);
+
+	@media (min-width: 768px) {
+		height: calc(100vh - 90px)
+	}
 
 	@media (min-width: 992px) {
 		padding: 120px 0;
+		position: relative;
 	}
 
 	.dm-hero-content {
@@ -22,8 +26,12 @@
 
 		&__image {
 			text-align: center;
-			margin-bottom: 80px;
+			margin-bottom: 40px;
 			position: relative;
+
+			@media (min-width: 768px) {
+				margin-bottom: 80px;
+			}
 
 			@media (min-width: 992px) {
 				width: 50%;
@@ -77,9 +85,14 @@
 			&__pic {
 				display: inline-block;
 				margin: 0 auto;
-				height: 300px;
-				width: 300px;
+				height: 230px;
+				width: 230px;
 				position: relative;
+
+				@media (min-width: 768px) {
+					height: 300px;
+					width: 300px;
+				}
 
 				@media (min-width: 1200px) {
 					height: 350px;
@@ -148,6 +161,7 @@
 
 						&:hover {
 							width: 152px;
+							cursor: default;
 
 							p {
 								font-size: 13px;
@@ -199,6 +213,14 @@
 					transform: translateY(-50%);
 					background-color: $grayDark;
 				}
+
+				span {
+					display: none;
+
+					@media (min-width: 768px) {
+						display: inline-block;
+					}
+				}
 			}
 
 			p {
@@ -212,6 +234,16 @@
 	}
 
 	.scroll-down {
-		border: 1px solid red;
+		display: none;
+		position: absolute;
+		bottom: 100px;
+
+		p {
+			color: $grayDark;
+		}
+
+		@media (min-width: 768px) {
+			display: block;
+		}
 	}
 }
