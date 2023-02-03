@@ -196,54 +196,53 @@
 
 			h1 {
 				@include heading;
-			}
 
-			h2 {
-				@include subheading;
-				position: relative;
-				padding-left: 85px;
+				h2 {
+					@include subheading;
+					position: relative;
+					padding-left: 85px;
 
-				&::before {
-					content: '';
-					height: 2px;
-					width: 65px;
-					position: absolute;
-					left: 5px;
-					top: 50%;
-					transform: translateY(-50%);
-					background-color: $grayDark;
-				}
+					&::before {
+						content: '';
+						height: 2px;
+						width: 65px;
+						position: absolute;
+						left: 5px;
+						top: 50%;
+						transform: translateY(-50%);
+						background-color: $grayDark;
+					}
 
-				span {
-					display: none;
+					span {
+						display: none;
 
-					@media (min-width: 768px) {
-						display: inline-block;
+						@media (min-width: 768px) {
+							display: inline-block;
+						}
 					}
 				}
+
+				p {
+					margin-bottom: 40px;
+				}
+
+				a {
+					@include btn();
+				}
 			}
+		}
+
+		.scroll-down {
+			display: none;
+			position: absolute;
+			bottom: 100px;
 
 			p {
-				margin-bottom: 40px;
+				color: $grayDark;
 			}
 
-			a {
-				@include btn();
+			@media (min-width: 992px) {
+				display: block;
 			}
 		}
 	}
-
-	.scroll-down {
-		display: none;
-		position: absolute;
-		bottom: 100px;
-
-		p {
-			color: $grayDark;
-		}
-
-		@media (min-width: 992px) {
-			display: block;
-		}
-	}
-}
