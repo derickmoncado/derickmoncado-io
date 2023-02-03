@@ -190,7 +190,7 @@
 				width: 50%;
 			}
 
-			span {
+			&>span {
 				font-size: 48px;
 			}
 
@@ -242,7 +242,7 @@
 			color: $grayDark;
 		}
 
-		@media (min-width: 768px) {
+		@media (min-width: 992px) {
 			display: block;
 		}
 	}

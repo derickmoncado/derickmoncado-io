@@ -1,9 +1,13 @@
 /* Mixins */
 
 @mixin heading {
-	font-size: 58px;
+	font-size: 52px;
 	font-weight: bold;
 	letter-spacing: -3px;
+
+	@media (min-width: 540px) {
+		font-size: 58px;
+	}
 }
 
 @mixin subheading {
