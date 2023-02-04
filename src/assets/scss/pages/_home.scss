@@ -130,6 +130,7 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					border: 1px solid #d0bc33;
 
 					p {
 						font-size: 13px;
@@ -160,7 +161,7 @@
 						}
 
 						&:hover {
-							width: 152px;
+							width: 153px;
 							cursor: default;
 
 							p {
