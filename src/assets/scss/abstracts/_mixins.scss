@@ -10,6 +10,16 @@
 	}
 }
 
+@mixin heading-sm {
+	font-size: 42px;
+	font-weight: bold;
+	letter-spacing: -2px;
+
+	@media (min-width: 540px) {
+		font-size: 48px;
+	}
+}
+
 @mixin subheading {
 	font-size: 22px;
 	font-weight: 500;
