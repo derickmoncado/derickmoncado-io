@@ -267,14 +267,12 @@
 		}
 
 		&__body {
-			border: 2px solid blue;
 
 			@media (min-width: 992px) {
 				display: flex;
 			}
 
 			&__image {
-				border: 1px solid red;
 				margin-bottom: 60px;
 
 				@media (min-width: 992px) {
@@ -289,14 +287,15 @@
 			}
 
 			&__details {
-				border: 1px solid red;
+				text-align: center;
 
 				@media (min-width: 992px) {
 					width: 50%;
+					text-align: left;
 				}
 
 				&__blocks {
-					margin-bottom: 60px;
+					margin-bottom: 45px;
 
 					@media (min-width: 576px) {
 						display: flex;
@@ -332,6 +331,14 @@
 							color: $yellowDark;
 						}
 					}
+				}
+
+				&>p {
+					margin-bottom: 30px;
+				}
+
+				a {
+					@include btn;
 				}
 			}
 		}
