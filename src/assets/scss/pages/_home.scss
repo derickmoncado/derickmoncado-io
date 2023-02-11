@@ -370,6 +370,37 @@
 				@include light-bg;
 				padding: 40px;
 				border-radius: 20px;
+
+				h3 {
+					@include subheading;
+				}
+
+				&__content {
+
+					&__item {
+						border: 1px solid red;
+
+						&__icon {
+
+							i {}
+						}
+
+						&__details {
+
+							p {
+
+								&:first-child {
+									color: $grayDark;
+									font-size: 22px;
+								}
+
+								&:last-child {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
