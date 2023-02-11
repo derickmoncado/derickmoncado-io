@@ -364,7 +364,14 @@
 			}
 		}
 
-		&__body {}
+		&__body {
+
+			.block {
+				@include light-bg;
+				padding: 40px;
+				border-radius: 20px;
+			}
+		}
 	}
 }
 
