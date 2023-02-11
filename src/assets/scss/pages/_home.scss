@@ -346,6 +346,28 @@
 }
 
 
+// Skills & Hobbies section ==========
+#dm-skills-and-hobbies {
+	text-align: center;
+
+	.dm-skills-and-hobbies-content {
+
+		&__heading {
+			margin-bottom: 60px;
+
+			h2 {
+				@include heading-sm;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		&__body {}
+	}
+}
+
 // Footer ==========
 footer {
 
