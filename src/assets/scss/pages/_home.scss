@@ -370,32 +370,51 @@
 				@include light-bg;
 				padding: 40px;
 				border-radius: 20px;
+				max-width: 500px;
+				margin: 0 auto 50px auto;
 
 				h3 {
 					@include subheading;
+					margin-bottom: 30px;
 				}
 
 				&__content {
+					display: flex;
+					flex-direction: column;
 
-					&__item {
-						border: 1px solid red;
+					&__row {
+						display: flex;
+						margin-bottom: 20px;
 
-						&__icon {
-
-							i {}
+						&:last-child {
+							margin: 0;
 						}
 
-						&__details {
+						&__item {
+							display: flex;
+							width: 50%;
 
-							p {
+							&__icon {
+								margin-right: 12px;
 
-								&:first-child {
-									color: $grayDark;
-									font-size: 22px;
+								i {
+									font-size: 24px;
 								}
+							}
 
-								&:last-child {
-									font-size: 16px;
+							&__details {
+								text-align: left;
+
+								p {
+
+									&:first-child {
+										color: $grayDark;
+										font-size: 22px;
+									}
+
+									&:last-child {
+										font-size: 16px;
+									}
 								}
 							}
 						}
