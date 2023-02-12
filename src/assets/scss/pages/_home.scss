@@ -197,8 +197,7 @@
 			}
 
 			p:first-of-type {
-				@include subheading;
-				font-size: 22px;
+				@include subheading(22px);
 				position: relative;
 				padding-left: 85px;
 				margin-bottom: 20px;
@@ -323,7 +322,7 @@
 						}
 
 						p:first-of-type {
-							@include subheading;
+							@include subheading(18px);
 						}
 
 						p:last-of-type {
@@ -386,7 +385,7 @@
 				}
 
 				h3 {
-					@include subheading;
+					@include subheading(22px);
 					margin-bottom: 30px;
 				}
 
@@ -424,7 +423,7 @@
 									}
 
 									&:last-child {
-										font-size: 16px;
+										font-size: 12px;
 									}
 								}
 							}
