@@ -366,12 +366,24 @@
 
 		&__body {
 
+			@media (min-width: 1140px) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				grid-column-gap: 50px;
+				grid-row-gap: 50px;
+			}
+
 			.block {
 				@include light-bg;
 				padding: 40px;
 				border-radius: 20px;
 				max-width: 500px;
 				margin: 0 auto 50px auto;
+
+				@media (min-width: 1140px) {
+					margin: 0;
+				}
 
 				h3 {
 					@include subheading;
@@ -409,7 +421,6 @@
 
 									&:first-child {
 										color: $grayDark;
-										font-size: 22px;
 									}
 
 									&:last-child {
