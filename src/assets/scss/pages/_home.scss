@@ -464,7 +464,37 @@
 				grid-row-gap: 50px;
 			}
 
+			.block {
+				@include light-bg;
+				padding: 40px 60px;
+				border-radius: 20px;
+				max-width: 500px;
+				margin: 0 auto 50px auto;
+				text-align: left;
 
+				@media (min-width: 1140px) {
+					margin: 0;
+				}
+
+				&__content {
+
+					&>i {
+						display: block;
+						font-size: 33px;
+						margin-bottom: 5px;
+					}
+
+					h3 {
+						@include subheading(22px);
+						margin-bottom: 30px;
+					}
+
+					button {
+						border: none;
+						background: none;
+					}
+				}
+			}
 		}
 	}
 }
