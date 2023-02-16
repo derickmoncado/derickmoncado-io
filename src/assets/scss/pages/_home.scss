@@ -469,8 +469,12 @@
 				padding: 40px 60px;
 				border-radius: 20px;
 				max-width: 500px;
+				height: 320px;
 				margin: 0 auto 50px auto;
 				text-align: left;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
 
 				@media (min-width: 1140px) {
 					margin: 0;
