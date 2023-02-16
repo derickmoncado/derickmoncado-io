@@ -490,12 +490,34 @@
 
 					h3 {
 						@include subheading(22px);
-						margin-bottom: 30px;
+						margin-bottom: 20px;
 					}
 
 					button {
 						border: none;
 						background: none;
+						padding: 0;
+
+						p {
+							font-size: 16px;
+
+							i {
+								display: inline-block;
+								transform: translateX(0px);
+								transition: transform 0.3s ease-in-out;
+							}
+						}
+
+						&:hover {
+
+							p {
+
+								i {
+									transform: translateX(8px);
+									transition: transform 0.3s ease-in-out;
+								}
+							}
+						}
 					}
 				}
 			}
