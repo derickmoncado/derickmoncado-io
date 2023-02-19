@@ -334,6 +334,17 @@
 
 				&>p {
 					margin-bottom: 30px;
+					position: relative;
+
+					button {
+						background: none;
+						border: none;
+						position: absolute;
+						right: -18px;
+						bottom: -5px;
+						color: $grayDark;
+						text-decoration: underline;
+					}
 				}
 
 				a {

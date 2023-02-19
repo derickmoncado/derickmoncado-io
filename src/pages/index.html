@@ -79,9 +79,29 @@ Title: home (index.html)
 					</div>
 					<p>I’m a front end developer, designer, and content creator based out of Los Angeles, CA. I’ve been
 						working professionally for over 8 years. I cover topics such as software engineering, tech and
-						anything I find interesting on my YouTube channel</p>
+						anything I find interesting on my YouTube channel
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+							data-bs-target="#aboutMeModal">
+							read more
+						</button>
+					</p>
 					<a href="#" title="Derick Moncado's resume'">Download CV &nbsp;<i
 							class="bi bi-file-earmark-arrow-down-fill"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="aboutMeModal" tabindex="-1" aria-labelledby="aboutMeModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="aboutMeModalLabel">About Me</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					list of stuff goes here
 				</div>
 			</div>
 		</div>
