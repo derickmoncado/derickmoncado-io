@@ -333,17 +333,29 @@
 				}
 
 				&>p {
-					margin-bottom: 30px;
+					margin-bottom: 60px;
 					position: relative;
+
+					@media (min-width: 992px) {
+						margin-bottom: 30px;
+					}
 
 					button {
 						background: none;
 						border: none;
 						position: absolute;
-						right: -18px;
-						bottom: -5px;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: -30px;
 						color: $grayDark;
 						text-decoration: underline;
+
+						@media (min-width: 992px) {
+							left: auto;
+							right: -18px;
+							bottom: -5px;
+							transform: none;
+						}
 					}
 				}
 

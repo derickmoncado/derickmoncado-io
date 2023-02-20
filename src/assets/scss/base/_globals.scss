@@ -47,3 +47,36 @@ h2 {
 h3 {
 	letter-spacing: -1px;
 }
+
+// Modal
+.modal-dialog {
+
+	@media (min-width: 768px) {
+		max-width: 80%;
+	}
+
+	.modal-content {
+		@include light-bg;
+		border-radius: 15px;
+		padding: 40px;
+
+		.modal-header {
+			padding: 0;
+			text-align: center;
+			display: block;
+			border: none;
+
+			h3 {
+				@include subheading(24px);
+				margin-bottom: 30px;
+			}
+
+			.btn-close {
+				position: absolute;
+				right: 40px;
+				top: 40px;
+				font-size: 24px;
+			}
+		}
+	}
+}
