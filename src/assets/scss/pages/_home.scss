@@ -108,6 +108,9 @@
 					left: 0;
 					border-radius: 150px;
 					overflow: hidden;
+					background-image: url('../images/headshot.jpg');
+					background-repeat: no-repeat;
+					background-size: contain;
 
 					@media (min-width: 1200px) {
 						border-radius: 175px;
@@ -239,6 +242,10 @@
 
 		p {
 			color: $grayDark;
+
+			i {
+				display: inline-block;
+			}
 		}
 
 		@media (min-width: 768px) {
