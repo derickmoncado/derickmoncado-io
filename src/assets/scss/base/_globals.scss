@@ -1,4 +1,16 @@
 /* Global Styles */
+main {
+	position: relative;
+	padding-top: 90px;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: $yellow;
+}
 
 section {
 	padding: 200px 0;
