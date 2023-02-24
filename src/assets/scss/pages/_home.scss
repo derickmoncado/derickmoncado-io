@@ -161,7 +161,7 @@
 						}
 
 						&:hover {
-							width: 153px;
+							width: 152px;
 							cursor: default;
 
 							p {
@@ -488,10 +488,10 @@
 
 			@media (min-width: 1140px) {
 				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				grid-template-rows: repeat(2, 1fr);
-				grid-column-gap: 50px;
-				grid-row-gap: 50px;
+				grid-template-columns: repeat(3, 1fr);
+				//grid-template-rows: repeat(2, 1fr);
+				grid-column-gap: 25px;
+				//grid-row-gap: 50px;
 			}
 
 			.block {
@@ -508,6 +508,7 @@
 
 				@media (min-width: 1140px) {
 					margin: 0;
+					padding: 40px;
 				}
 
 				&__content {
@@ -521,6 +522,14 @@
 					h3 {
 						@include subheading(22px);
 						margin-bottom: 20px;
+
+						br {
+							display: none;
+
+							@media (min-width: 1140px) {
+								display: inline-block;
+							}
+						}
 					}
 
 					button {
