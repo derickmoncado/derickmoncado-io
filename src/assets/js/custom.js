@@ -9,6 +9,16 @@
 		el.classList.add('active');
 	});
 
+	// add class to header on scroll to add drop shadow 
+	const headerBar = document.getElementById('dm-header');
+	window.onscroll = function () {
+		if (window.scrollY > 40) {
+			headerBar.classList.add('active');
+		} else {
+			headerBar.classList.remove('active');
+		}
+	};
+
 	// Init Swiper (swiper.js)
 	const swiper = new Swiper('.swiper', {
 		loop: true,
