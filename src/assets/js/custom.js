@@ -48,7 +48,7 @@
 	// Qualifications toggle
 	const togglerBtns = document.querySelectorAll('.toggler');
 	togglerBtns.forEach((btn) => {
-		btn.addEventListener('click', function (e) {
+		btn.addEventListener('click', (e) => {
 			e.preventDefault();
 			togglerBtns.forEach(i => i.classList.remove('active'));
 			btn.classList.toggle('active');
