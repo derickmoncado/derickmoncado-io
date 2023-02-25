@@ -510,35 +510,31 @@ Title: home (index.html)
 			</div>
 			<div class="dm-qualifications-content__body">
 				<div class="dm-qualifications-content__body__toggler">
-					<button class="toggler active" id="experienceTab">
-						<p><i class="bi bi-stars"></i> Experience</p>
-					</button>
-					<button class="toggler" id="learningTab">
-						<p><i class="bi bi-journal-code"></i> Learning</p>
-					</button>
-
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 						<li class="nav-item" role="presentation">
-							<button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-								data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-								aria-selected="true">Home</button>
+							<button class="toggler active" id="experienceTab" data-bs-toggle="tab"
+								data-bs-target="#experienceTab-pane" type="button" role="tab"
+								aria-controls="experienceTab-pane" aria-selected="true">
+								<p><i class="bi bi-stars"></i> Experience</p>
+							</button>
 						</li>
 						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-								data-bs-target="#profile-tab-pane" type="button" role="tab"
-								aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+							<button class="toggler" id="learningTab" data-bs-toggle="tab"
+								data-bs-target="#learningTab-pane" type="button" role="tab"
+								aria-controls="learningTab-pane" aria-selected="false">
+								<p><i class="bi bi-journal-code"></i> Learning</p>
+							</button>
 						</li>
 					</ul>
 				</div>
 
 				<div class="dm-qualifications-content__body__content">
 					<div class="tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
-							aria-labelledby="home-tab" tabindex="0">asdfsdafsdf</div>
-						<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-							tabindex="0">asdsadsdf</div>
+						<div class="tab-pane fade show active" id="experienceTab-pane" role="tabpanel"
+							aria-labelledby="experienceTab" tabindex="0">Experience</div>
+						<div class="tab-pane fade" id="learningTab-pane" role="tabpanel" aria-labelledby="learningTab"
+							tabindex="0">Learning</div>
 					</div>
-
 				</div>
 			</div>
 		</div>

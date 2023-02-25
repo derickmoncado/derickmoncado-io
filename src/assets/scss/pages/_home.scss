@@ -586,46 +586,54 @@
 		&__body {
 
 			&__toggler {
-				display: flex;
-				justify-content: center;
+				margin-bottom: 80px;
 
-				.toggler {
-					background: none;
-					border: 2px solid $grayDark;
-					outline: none;
-					width: 175px;
-					padding: 8px 6px;
-					transition: 0.3s ease-in-out;
+				ul {
+					display: flex;
+					justify-content: center;
+					border-bottom: none;
 
-					p {
-						color: $grayDark;
-					}
+					li {
 
-					&:hover {
-						background: rgb(50, 51, 48, 0.08);
-						transition: 0.3s ease-in-out;
-					}
+						.toggler {
+							background: none;
+							border: 2px solid $grayDark;
+							outline: none;
+							width: 175px;
+							padding: 8px 6px;
+							transition: 0.3s ease-in-out;
 
-					&.active {
-						background: $grayDark;
-						color: $yellow;
+							p {
+								color: $grayDark;
+							}
 
-						p {
-							color: $yellow;
+							&:hover {
+								background: rgb(50, 51, 48, 0.08);
+								transition: 0.3s ease-in-out;
+							}
+
+							&.active {
+								background: $grayDark;
+								color: $yellow;
+
+								p {
+									color: $yellow;
+								}
+							}
+						}
+
+						#experienceTab {
+							border-top-left-radius: 15px;
+							border-bottom-left-radius: 15px;
+							border-right-width: 1px;
+						}
+
+						#learningTab {
+							border-top-right-radius: 15px;
+							border-bottom-right-radius: 15px;
+							border-left-width: 1px;
 						}
 					}
-				}
-
-				#experienceTab {
-					border-top-left-radius: 15px;
-					border-bottom-left-radius: 15px;
-					border-right-width: 1px;
-				}
-
-				#learningTab {
-					border-top-right-radius: 15px;
-					border-bottom-right-radius: 15px;
-					border-left-width: 1px;
 				}
 			}
 
