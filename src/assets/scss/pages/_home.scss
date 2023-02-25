@@ -638,10 +638,28 @@
 			}
 
 			&__content {
-				border: 1px solid red;
 
 				.timeline {
-					border: 2px solid black;
+					border: 4px solid black;
+
+					&__row {
+						border: 2px solid blue;
+						display: flex;
+
+						&__block {
+							border: 2px solid green;
+							width: 50%;
+							text-align: left;
+
+							&:first-child {
+								padding-right: 50px;
+							}
+
+							&:last-child {
+								padding-left: 60px;
+							}
+						}
+					}
 				}
 			}
 		}
