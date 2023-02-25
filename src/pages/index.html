@@ -403,7 +403,7 @@ Title: home (index.html)
 					<div class="block__content">
 						<i class="bi bi-columns-gap"></i>
 						<h3>Visual Design,<br> UI / UX</h3>
-						<button>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vdModal">
 							<p>View More <i class="bi bi-arrow-right-short"></i></p>
 						</button>
 					</div>
@@ -413,7 +413,7 @@ Title: home (index.html)
 					<div class="block__content">
 						<i class="bi bi-camera"></i>
 						<h3>Photography &<br> Videography</h3>
-						<button>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pvModal">
 							<p>View More <i class="bi bi-arrow-right-short"></i></p>
 						</button>
 					</div>
@@ -427,7 +427,57 @@ Title: home (index.html)
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3 class="modal-title" id="fedModalLabel">Front End Web & Application Development</h3>
+					<h3 class="modal-title" id="fedModalLabel">Front End Web and Application Development</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum
+						faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras
+						justo odio, dapibus ac facilisis in, egestas eget quam.
+
+						Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						Donec sed odio dui. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
+						dapibus posuere velit aliquet.
+
+						Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus
+						mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis
+						risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Capabilities - Visual Design - Modal -->
+	<div class="modal fade" id="vdModal" tabindex="-1" aria-labelledby="vdModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="vdModalLabel">Visual, Print, and UI / UX Design</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum
+						faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras
+						justo odio, dapibus ac facilisis in, egestas eget quam.
+
+						Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						Donec sed odio dui. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
+						dapibus posuere velit aliquet.
+
+						Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus
+						mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis
+						risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Capabilities - Photography & Videography - Modal -->
+	<div class="modal fade" id="pvModal" tabindex="-1" aria-labelledby="pvModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="pvModalLabel">Photography and Videography</h3>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
