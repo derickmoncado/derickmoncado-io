@@ -640,23 +640,62 @@
 			&__content {
 
 				.timeline {
-					border: 4px solid black;
 
 					&__row {
-						border: 2px solid blue;
 						display: flex;
 
 						&__block {
-							border: 2px solid green;
 							width: 50%;
 							text-align: left;
+							position: relative;
+							padding-bottom: 30px;
 
 							&:first-child {
 								padding-right: 50px;
+								border-right: 1px solid $grayDark;
+
+								&::before {
+									content: '';
+									height: 24px;
+									width: 24px;
+									border-radius: 12px;
+									background-color: $grayDark;
+									display: inline-block;
+									position: absolute;
+									right: -13px;
+									top: 0px;
+								}
 							}
 
 							&:last-child {
 								padding-left: 60px;
+								border-left: 1px solid $grayDark;
+							}
+
+							p {
+								color: $grayDark;
+
+								&:last-child {
+									color: $yellowDark;
+								}
+
+								i {
+									display: inline-block;
+									margin-right: 5px;
+								}
+							}
+
+							.title {
+								@include subheading(18px);
+							}
+
+							.company {
+								font-size: 16px;
+								margin-bottom: 3px;
+							}
+
+							.dates {
+								font-size: 12px;
 							}
 						}
 					}
