@@ -599,9 +599,13 @@
 							background: none;
 							border: 2px solid $grayDark;
 							outline: none;
-							width: 175px;
+							width: 150px;
 							padding: 8px 6px;
 							transition: 0.3s ease-in-out;
+
+							@media (min-width: 576px) {
+								width: 175px;
+							}
 
 							p {
 								color: $grayDark;
@@ -651,7 +655,7 @@
 							padding-bottom: 30px;
 
 							&:first-child {
-								padding-right: 50px;
+								padding-right: 15px;
 								border-right: 1px solid $grayDark;
 
 								&::before {
@@ -665,11 +669,19 @@
 									right: -13px;
 									top: 0px;
 								}
+
+								@media (min-width: 576px) {
+									padding-right: 50px;
+								}
 							}
 
 							&:last-child {
-								padding-left: 60px;
+								padding-left: 25px;
 								border-left: 1px solid $grayDark;
+
+								@media (min-width: 576px) {
+									padding-right: 60px;
+								}
 							}
 
 							p {
@@ -686,7 +698,11 @@
 							}
 
 							.title {
-								@include subheading(18px);
+								@include subheading(16px);
+
+								@media (min-width: 576px) {
+									@include subheading(18px);
+								}
 							}
 
 							.company {
