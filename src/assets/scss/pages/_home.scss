@@ -644,6 +644,8 @@
 			&__content {
 
 				.timeline {
+					max-width: 430px;
+					margin: 0 auto;
 
 					&__row {
 						display: flex;
@@ -686,10 +688,10 @@
 							}
 
 							&:last-child {
-								padding-left: 25px;
+								padding-left: 10%;
 
 								@media (min-width: 576px) {
-									padding-right: 60px;
+									padding-left: 14%;
 								}
 							}
 
