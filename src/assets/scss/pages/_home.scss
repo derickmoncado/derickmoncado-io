@@ -648,6 +648,16 @@
 					&__row {
 						display: flex;
 
+						&:last-child {
+
+							.timeline__row__block {
+
+								&:first-child {
+									border-color: transparent;
+								}
+							}
+						}
+
 						&__block {
 							width: 50%;
 							text-align: left;
@@ -656,7 +666,7 @@
 
 							&:first-child {
 								padding-right: 15px;
-								border-right: 1px solid $grayDark;
+								border-right: 2px solid $grayDark;
 
 								&::before {
 									content: '';
@@ -677,7 +687,6 @@
 
 							&:last-child {
 								padding-left: 25px;
-								border-left: 1px solid $grayDark;
 
 								@media (min-width: 576px) {
 									padding-right: 60px;
