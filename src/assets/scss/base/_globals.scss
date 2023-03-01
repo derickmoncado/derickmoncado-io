@@ -68,7 +68,7 @@ h3 {
 	}
 
 	@media (min-width: 1200px) {
-		max-width: 1140px;
+		max-width: 930px;
 	}
 
 	.modal-content {
@@ -92,6 +92,13 @@ h3 {
 				right: 40px;
 				top: 40px;
 				font-size: 24px;
+			}
+		}
+
+		.modal-body {
+
+			p {
+				margin-bottom: 30px;
 			}
 		}
 	}
