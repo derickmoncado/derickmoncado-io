@@ -33,7 +33,7 @@
 			}
 
 			@media (min-width: 992px) {
-				width: 50%;
+				width: 45%;
 				margin-bottom: 0;
 				order: 1;
 				display: flex;
@@ -188,7 +188,7 @@
 			}
 
 			@media (min-width: 992px) {
-				width: 50%;
+				width: 55%;
 			}
 
 			&>span {
@@ -202,13 +202,13 @@
 			p:first-of-type {
 				@include subheading(22px);
 				position: relative;
-				padding-left: 85px;
+				padding-left: 75px;
 				margin-bottom: 20px;
 
 				&::before {
 					content: '';
 					height: 2px;
-					width: 65px;
+					width: 55px;
 					position: absolute;
 					left: 5px;
 					top: 50%;
@@ -219,7 +219,7 @@
 				span {
 					display: none;
 
-					@media (min-width: 768px) {
+					@media (min-width: 500px) {
 						display: inline-block;
 					}
 				}
