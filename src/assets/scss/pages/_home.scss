@@ -733,6 +733,32 @@
 }
 
 
+// About Me section ==========
+#dm-testimonials {
+	text-align: center;
+
+	.dm-testimonials-content {
+
+		&__heading {
+			margin-bottom: 60px;
+
+			h2 {
+				@include heading-sm;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		&__body {
+
+			color: blue;
+		}
+	}
+}
+
+
 // Footer ==========
 footer {
 
