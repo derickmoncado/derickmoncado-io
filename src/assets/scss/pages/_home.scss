@@ -760,7 +760,74 @@
 
 		&__body {
 
-			color: red;
+			.swiper-slide {
+				border: 10px solid black;
+				padding: 0 70px;
+
+				.slide-inner {
+					@include light-bg;
+					border: 10px solid red;
+					padding: 40px 60px;
+
+					&__details {
+						border: 10px solid blue;
+						display: flex;
+						margin-bottom: 40px;
+
+						&__image {
+							border: 1px solid black;
+							margin-right: 20px;
+
+							&__frame {
+								height: 80px;
+								width: 80px;
+								background-color: $grayDark;
+								border-radius: 40px;
+							}
+						}
+
+						&__name {
+							border: 1px solid black;
+							text-align: left;
+							width: calc(100% - 100px);
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+
+							p:first-child {
+								@include subheading(18px);
+							}
+
+							p:last-child {
+								font-size: 16px;
+							}
+						}
+					}
+
+					&__quote {
+						border: 10px solid green;
+						text-align: left;
+
+						p {
+
+							span {
+								position: relative;
+								display: inline-block;
+
+								i {
+									font-size: 24px;
+									color: $grayDark;
+									display: inline-block;
+									transform: rotate(180deg);
+									position: absolute;
+									top: -28px;
+									right: -22px;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
