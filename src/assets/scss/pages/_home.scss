@@ -783,6 +783,24 @@
 								width: 80px;
 								background-color: $grayDark;
 								border-radius: 40px;
+								background-repeat: no-repeat;
+								background-size: contain;
+
+								&.evan {
+									background-image: url('../images/evan.jpg');
+								}
+
+								&.corbin {
+									background-image: url('../images/corbin.jpg');
+								}
+
+								&.jason {
+									background-image: url('../images/jason.jpg');
+								}
+
+								&.michael {
+									background-image: url('../images/michael.jpg');
+								}
 							}
 						}
 
@@ -809,6 +827,7 @@
 						text-align: left;
 
 						p {
+							font-size: 16px;
 
 							span {
 								position: relative;
