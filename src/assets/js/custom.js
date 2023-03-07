@@ -22,6 +22,7 @@
 	// Init Swiper (swiper.js)
 	const swiper = new Swiper('.swiper', {
 		loop: true,
+		autoHeight: true,
 		pagination: {
 			el: '.swiper-pagination',
 		},
