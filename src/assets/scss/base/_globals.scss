@@ -74,7 +74,11 @@ h3 {
 	.modal-content {
 		@include light-bg;
 		border-radius: 15px;
-		padding: 50px;
+		padding: 50px 25px 25px 25px;
+
+		@media (min-width: 992px) {
+			padding: 50px;
+		}
 
 		.modal-header {
 			padding: 0;
