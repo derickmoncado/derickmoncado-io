@@ -322,6 +322,7 @@
 						@media (min-width: 992px) {
 							width: 31%;
 							margin: 0;
+							text-align: center;
 						}
 
 						i {
@@ -872,12 +873,35 @@
 }
 
 
-// Footer ==========
-footer {
+// Contact Me section ==========
+#dm-about-me {
+	text-align: center;
 
-	img {
-		width: 40px;
-		display: inline-block;
-		margin-bottom: 6px;
+	.dm-about-me-content {
+
+		&__heading {
+			margin-bottom: 60px;
+
+			h2 {
+				@include heading-sm;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		&__body {}
+
 	}
-}
+
+
+	// Footer ==========
+	footer {
+
+		img {
+			width: 40px;
+			display: inline-block;
+			margin-bottom: 6px;
+		}
+	}
