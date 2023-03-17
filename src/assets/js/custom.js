@@ -11,7 +11,7 @@
 
 	// add class to header on scroll to add drop shadow 
 	const headerBar = document.getElementById('dm-header');
-	window.onscroll = function () {
+	window.onscroll = () => {
 		if (window.scrollY > 40) {
 			headerBar.classList.add('active');
 		} else {
