@@ -874,10 +874,10 @@
 
 
 // Contact Me section ==========
-#dm-about-me {
+#dm-contact-me {
 	text-align: center;
 
-	.dm-about-me-content {
+	.dm-contact-me-content {
 
 		&__heading {
 			margin-bottom: 60px;
@@ -894,14 +894,15 @@
 		&__body {}
 
 	}
+}
 
 
-	// Footer ==========
-	footer {
+// Footer ==========
+footer {
 
-		img {
-			width: 40px;
-			display: inline-block;
-			margin-bottom: 6px;
-		}
+	img {
+		width: 40px;
+		display: inline-block;
+		margin-bottom: 6px;
 	}
+}
