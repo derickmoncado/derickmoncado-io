@@ -891,8 +891,44 @@
 			}
 		}
 
-		&__body {}
+		&__body {
 
+			&__inner {
+
+				&__email {
+
+					.email {}
+				}
+
+				&__socials {
+
+					.socials {
+
+						&__block {
+							background-color: $grayDark;
+							border-radius: 12px;
+							padding: 6px;
+
+							.name {
+								color: $yellow;
+
+								i {
+									color: $yellow;
+									display: inline-block;
+									margin-right: ;
+								}
+
+							}
+
+							.description {
+								font-size: 12px;
+								color: $yellowDark;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
