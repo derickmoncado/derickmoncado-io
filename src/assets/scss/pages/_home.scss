@@ -897,7 +897,25 @@
 
 				&__email {
 
-					.email {}
+					a {
+						@include light-bg;
+						border-radius: 15px;
+						margin-bottom: 40px;
+						padding: 100px 0;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						text-decoration: none;
+
+						&>i {
+							font-size: 24px;
+							color: $grayDark;
+						}
+
+						p {
+							margin-bottom: 20px;
+						}
+					}
 				}
 
 				&__socials {
