@@ -895,7 +895,16 @@
 
 			&__inner {
 
+				@media (min-width: 1140px) {
+					display: flex;
+				}
+
 				&__email {
+
+					@media (min-width: 1140px) {
+						width: 50%;
+						padding-right: 25px;
+					}
 
 					a {
 						@include light-bg;
@@ -938,6 +947,11 @@
 				}
 
 				&__socials {
+
+					@media (min-width: 1140px) {
+						width: 50%;
+						padding-left: 25px;
+					}
 
 					.socials {
 
