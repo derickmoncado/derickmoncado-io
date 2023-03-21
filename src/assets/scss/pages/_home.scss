@@ -908,12 +908,31 @@
 						text-decoration: none;
 
 						&>i {
-							font-size: 24px;
+							font-size: 32px;
 							color: $grayDark;
 						}
 
 						p {
 							margin-bottom: 20px;
+							@include subheading(18px);
+							transform: translateX(0px);
+							transition: transform 0.3s ease-in-out;
+
+							&:last-child {
+								margin: 0;
+								@include subheading(16px);
+							}
+						}
+
+						&:hover {
+
+							p {
+
+								&:last-child {
+									transform: translateX(8px);
+									transition: transform 0.3s ease-in-out;
+								}
+							}
 						}
 					}
 				}
