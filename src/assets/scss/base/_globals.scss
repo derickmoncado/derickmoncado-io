@@ -115,3 +115,13 @@ h3 {
 		}
 	}
 }
+
+// Swiper next/prev and dots
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	color: $grayDark;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $grayDark;
+}
