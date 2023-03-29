@@ -64,6 +64,10 @@ h3 {
 	letter-spacing: -1px;
 }
 
+h3 {
+	letter-spacing: -1px;
+}
+
 // Modal
 .modal-dialog {
 
@@ -92,7 +96,16 @@ h3 {
 
 			h3 {
 				@include subheading(24px);
-				margin-bottom: 30px;
+				margin-bottom: 15px;
+			}
+
+			p {
+				@include subheading(20px);
+
+				@media (min-width: 768px) {
+					width: 415px;
+					margin: 0 auto 30px auto;
+				}
 			}
 
 			.btn-close {
