@@ -56,4 +56,11 @@
 	// 	})
 	// });
 
+	// add class the header when nav is open
+	const navBtn = document.querySelector('.navbar-toggler');
+	navBtn.addEventListener('click', () => {
+		console.log('its been clicked baby!!');
+		headerBar.classList.toggle('open');
+	})
+
 })();
