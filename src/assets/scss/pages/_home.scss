@@ -291,7 +291,7 @@
 					//width: 380px;
 					height: 350px;
 					border-radius: 30px;
-					background-image: url('../images/about-me.jpg');
+					//background-image: url('../images/about-me.jpg');
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: contain;
@@ -375,6 +375,10 @@
 
 				a {
 					@include btn;
+
+					i {
+						padding-left: 10px;
+					}
 				}
 			}
 		}
