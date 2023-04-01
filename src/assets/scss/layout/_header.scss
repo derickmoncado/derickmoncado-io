@@ -33,9 +33,12 @@ header {
             .navbar-nav {
 
                 .nav-item {
-                    text-align: center;
-                    padding: 10px 0;
-                    @include subheading(20px);
+
+                    @media (max-width: 992px) {
+                        text-align: center;
+                        padding: 10px 0;
+                        @include subheading(20px);
+                    }
 
                     .nav-link {
                         color: $grayDark;
