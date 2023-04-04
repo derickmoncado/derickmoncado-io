@@ -123,6 +123,10 @@ h3 {
 				&:last-child {
 					margin-bottom: 0;
 				}
+
+				a {
+					color: $grayDark;
+				}
 			}
 
 			ul {
