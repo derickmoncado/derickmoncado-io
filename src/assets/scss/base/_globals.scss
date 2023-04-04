@@ -133,16 +133,24 @@ h3 {
 
 				li {
 					margin-bottom: 20px;
+					padding-left: 25px;
+					position: relative;
+
+					&::before {
+						content: '';
+						width: 18px;
+						height: 20px;
+						position: absolute;
+						left: 0;
+						top: 0;
+						background-image: url('../images/bootstrap-icons/caret-right-fill.svg');
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-position: center;
+					}
 
 					&:last-child {
 						margin: 0;
-					}
-
-					p {
-
-						i {
-							padding-right: 10px;
-						}
 					}
 				}
 			}

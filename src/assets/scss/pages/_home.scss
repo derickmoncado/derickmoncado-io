@@ -471,7 +471,11 @@
 								p {
 
 									&:first-child {
-										@include subheading(18px);
+										@include subheading(16px);
+
+										@media (min-width: 768px) {
+											@include subheading(18px);
+										}
 									}
 
 									&:last-child {
