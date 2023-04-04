@@ -142,7 +142,8 @@ h3 {
 						height: 20px;
 						position: absolute;
 						left: 0;
-						top: 0;
+						top: 50%;
+						transform: translateY(-50%);
 						background-image: url('../images/bootstrap-icons/caret-right-fill.svg');
 						background-repeat: no-repeat;
 						background-size: contain;
