@@ -366,7 +366,7 @@
 
 						@media (min-width: 992px) {
 							left: auto;
-							right: -18px;
+							right: -20px;
 							bottom: -5px;
 							transform: none;
 						}
@@ -492,11 +492,11 @@
 }
 
 
-// Capabilities section ==========
-#dm-capabilities {
+// Services section ==========
+#dm-services {
 	text-align: center;
 
-	.dm-capabilities-content {
+	.dm-services-content {
 
 		&__heading {
 			margin-bottom: 60px;
