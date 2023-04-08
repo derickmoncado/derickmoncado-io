@@ -49,7 +49,6 @@
 @mixin light-bg {
 	background-color: $yellowLight;
 	box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
-	border: 1px solid #d0bc33;
 }
 
 @mixin sm-container {

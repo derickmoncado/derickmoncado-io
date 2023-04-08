@@ -108,9 +108,10 @@
 					left: 0;
 					border-radius: 150px;
 					overflow: hidden;
-					background-image: url('../images/headshot.jpg');
+					background-image: url('../images/me-headshot.jpg');
 					background-repeat: no-repeat;
-					background-size: contain;
+					background-position: center;
+					background-size: cover;
 
 					@media (min-width: 1200px) {
 						border-radius: 175px;
