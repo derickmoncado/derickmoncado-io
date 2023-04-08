@@ -22,6 +22,7 @@ header {
 
         .navbar-brand {
             padding: 5px;
+            margin-right: 0;
 
             img {
                 width: 50px;
@@ -43,6 +44,10 @@ header {
                     .nav-link {
                         color: $grayDark;
                         transition: opacity 0.3s ease;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                 }
 
