@@ -288,13 +288,21 @@
 				}
 
 				&__frame {
-					//width: 380px;
 					height: 350px;
 					border-radius: 30px;
-					//background-image: url('../images/about-me.jpg');
+					background-image: url('../images/about-me.jpg');
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: contain;
+					background-position: center;
+
+					@media (min-width: 768px) {
+						height: 475px;
+					}
+
+					@media (min-width: 992px) {
+						width: 88%;
+						height: 350px;
+					}
 				}
 			}
 
