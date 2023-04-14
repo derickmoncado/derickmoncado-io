@@ -18,7 +18,6 @@ const removeCode = require('gulp-remove-code');
 const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
 const htmlreplace = require('gulp-html-replace');
-const ghpages = require('gh-pages');
 const ghPages = require("gulp-gh-pages");
 
 
@@ -178,11 +177,10 @@ function cnameFile() {
 }
 
 // deploy to prod
-function deploy() {
-	console.log("----DEPLOYING TO PROD!----");
+gulp.task('deploy', function () {
 	return gulp.src('./dist/**/*')
 		.pipe(ghPages());
-}
+});
 
 
 // TASK: $ gulp dev
