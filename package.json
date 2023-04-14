@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.1.0",
