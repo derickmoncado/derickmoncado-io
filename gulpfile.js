@@ -19,6 +19,7 @@ const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
 const htmlreplace = require('gulp-html-replace');
 const ghpages = require('gh-pages');
+const ghPages = require("gulp-gh-pages");
 
 
 /* ---------------------------------------------------
@@ -176,9 +177,18 @@ function cnameFile() {
 	return src("src/CNAME").pipe(dest("dist"));
 }
 
+// deploy to prod
+function deploy() {
+	console.log("----DEPLOYING TO PROD!----");
+	return gulp.src('./dist/**/*')
+		.pipe(ghPages());
+}
+
 
 // TASK: $ gulp dev
 exports.dev = series(cleanDist, copyFont, copyImages, compileHTML, compileJS, resetPages, compileSCSS, browserSyncInit, watchFiles);
 
 // TASK: $ gulp build
 exports.build = series(cleanDist, compileSCSS, copyFont, copyImages, compileHTML, concatScripts, minifyScripts, minifyCss, cnameFile, renameSources, browserSyncInit);
+
+// TASK: $ gulp deploy
