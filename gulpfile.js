@@ -176,12 +176,6 @@ function cnameFile() {
 	return src("src/CNAME").pipe(dest("dist"));
 }
 
-// deploy to prod
-gulp.task('deploy', function () {
-	return gulp.src('./dist/**/*')
-		.pipe(ghPages());
-});
-
 
 // TASK: $ gulp dev
 exports.dev = series(cleanDist, copyFont, copyImages, compileHTML, compileJS, resetPages, compileSCSS, browserSyncInit, watchFiles);
@@ -189,4 +183,5 @@ exports.dev = series(cleanDist, copyFont, copyImages, compileHTML, compileJS, re
 // TASK: $ gulp build
 exports.build = series(cleanDist, compileSCSS, copyFont, copyImages, compileHTML, concatScripts, minifyScripts, minifyCss, cnameFile, renameSources, browserSyncInit);
 
-// TASK: $ gulp deploy
+// SCRIPT: deploy to prod (after running $ gulp build)
+// $ npm run deploy
