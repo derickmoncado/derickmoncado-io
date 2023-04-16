@@ -88,6 +88,14 @@ function copyImages() {
 		.pipe(browserSync.stream());
 }
 
+// favicon
+function favicon() {
+	console.log('----FAVICON!----');
+	return src('src/favicon.ico')
+		.pipe(dest('dist'))
+		.pipe(browserSync.stream());
+}
+
 // places font files in dist
 function copyFont() {
 	console.log('----COPYING FONTS INTO DIST FOLDER!----');
@@ -178,7 +186,7 @@ function cnameFile() {
 
 
 // TASK: $ gulp dev
-exports.dev = series(cleanDist, copyFont, copyImages, compileHTML, compileJS, resetPages, compileSCSS, browserSyncInit, watchFiles);
+exports.dev = series(cleanDist, copyFont, copyImages, compileHTML, compileJS, favicon, resetPages, compileSCSS, browserSyncInit, watchFiles);
 
 // TASK: $ gulp build
 exports.build = series(cleanDist, compileSCSS, copyFont, copyImages, compileHTML, concatScripts, minifyScripts, minifyCss, cnameFile, renameSources, browserSyncInit);
