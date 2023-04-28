@@ -1,7 +1,7 @@
 {
 	"name": "launchpad",
 	"version": "1.0.0",
-	"description": "Launchpad - A starter kit for front end developers",
+	"description": "My personal website - derickmoncado.io",
 	"main": "index.js",
 	"scripts": {
 		"sass": "sass --watch src/assets/scss/:css/",
@@ -45,5 +45,8 @@
 		"gulp-sass": "^5.1.0",
 		"panini": "^1.7.2",
 		"sass": "^1.57.1"
+	},
+	"overrides": {
+		"autoprefixer": "10.4.5"
 	}
 }
