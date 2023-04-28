@@ -17217,14 +17217,13 @@
 	};
 
 
-	// add class the header when nav is open
+	// add class to the header when nav is open
 	const navBtn = document.querySelector('.navbar-toggler');
 	navBtn.addEventListener('click', () => {
-		console.log('cadsfasdfadsf');
 		headerBar.classList.toggle('open');
 	})
 
-	// then remove and close nav when a nav-link is clicked
+	// then close nav when a nav-link is clicked
 	const navLink = document.querySelectorAll('.nav-link');
 	navLink.forEach((link) => {
 		link.addEventListener('click', () => {
