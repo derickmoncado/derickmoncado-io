@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
 	console.log('document ready!');
 
 	// Appends the 'active' class to nav links
@@ -18,6 +18,22 @@
 			headerBar.classList.remove('active');
 		}
 	};
+
+
+	// add class the header when nav is open
+	const navBtn = document.querySelector('.navbar-toggler');
+	navBtn.addEventListener('click', () => {
+		console.log('cadsfasdfadsf');
+		headerBar.classList.toggle('open');
+	})
+
+	// then remove and close nav when a nav-link is clicked
+	const navLink = document.querySelectorAll('.nav-link');
+	navLink.forEach((link) => {
+		link.addEventListener('click', () => {
+			navBtn.click();
+		})
+	});
 
 	// Init Swiper (swiper.js)
 	const swiper = new Swiper('.swiper', {
@@ -55,12 +71,5 @@
 	// 		btn.classList.toggle('active');
 	// 	})
 	// });
-
-	// add class the header when nav is open
-	const navBtn = document.querySelector('.navbar-toggler');
-	navBtn.addEventListener('click', () => {
-		console.log('its been clicked baby!!');
-		headerBar.classList.toggle('open');
-	})
 
 })();
