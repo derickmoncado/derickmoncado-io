@@ -291,10 +291,21 @@
 				&__frame {
 					height: 350px;
 					border-radius: 30px;
-					background-image: url('../images/about-me.jpg');
+					background-image: url('../images/group.gif');
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: center;
+					position: relative;
+
+					&::after {
+						content: "Me with coworkers in Whistler, Canada";
+						position: absolute;
+						font-size: small;
+						bottom: -24px;
+						font-weight: 400;
+						font-style: italic;
+						opacity: 0.5;
+					}
 
 					@media (min-width: 768px) {
 						height: 475px;
