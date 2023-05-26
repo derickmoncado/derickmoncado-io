@@ -296,12 +296,16 @@
 					background-size: cover;
 					background-position: center;
 					position: relative;
+					box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
 
 					&::after {
-						content: "Me with coworkers in Whistler, Canada";
+						content: "Me with coworkers in Whistler BC, Canada";
 						position: absolute;
 						font-size: small;
+						width: 100%;
 						bottom: -24px;
+						left: 50%;
+						transform: translateX(-50%);
 						font-weight: 400;
 						font-style: italic;
 						opacity: 0.5;
