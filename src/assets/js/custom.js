@@ -1,53 +1,56 @@
-'use strict';
+"use strict";
 
 (() => {
-	console.log('document ready!');
+	console.log("document ready!");
 
 	// Appends the 'active' class to nav links
 	let pathname = "." + window.location.pathname;
-	document.querySelectorAll(`.navbar-nav > li > a[href='${pathname}']`).forEach(el => {
-		el.classList.add('active');
-	});
+	document
+		.querySelectorAll(`.navbar-nav > li > a[href='${pathname}']`)
+		.forEach((el) => {
+			el.classList.add("active");
+		});
 
-	// add class to header on scroll to add drop shadow 
-	const headerBar = document.getElementById('dm-header');
+	// add class to header on scroll to add drop shadow
+	const headerBar = document.getElementById("dm-header");
 	window.onscroll = () => {
 		if (window.scrollY > 40) {
-			headerBar.classList.add('active');
+			headerBar.classList.add("active");
 		} else {
-			headerBar.classList.remove('active');
+			headerBar.classList.remove("active");
 		}
 	};
 
-
 	// add class to the header when nav is open
-	const navBtn = document.querySelector('.navbar-toggler');
-	navBtn.addEventListener('click', () => {
-		headerBar.classList.toggle('open');
-	})
+	const navBtn = document.querySelector(".navbar-toggler");
+	navBtn.addEventListener("click", () => {
+		headerBar.classList.toggle("open");
+	});
 
 	// then close nav when a nav-link is clicked
-	const navLink = document.querySelectorAll('.nav-link');
+	const navLink = document.querySelectorAll(".nav-link");
 	navLink.forEach((link) => {
-		link.addEventListener('click', () => {
-			navBtn.click();
-		})
+		link.addEventListener("click", () => {
+			if (window.innerWidth < 992) {
+				navBtn.click();
+			}
+		});
 	});
 
 	// Init Swiper (swiper.js)
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper(".swiper", {
 		loop: true,
 		autoHeight: true,
 		pagination: {
-			el: '.swiper-pagination',
+			el: ".swiper-pagination"
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev"
 		},
 		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
+			el: ".swiper-scrollbar"
+		}
 	});
 
 	// Init Emergence (emergence.js)
@@ -56,19 +59,10 @@
 	});
 
 	// Init tooltips everywhere (popper.js)
-	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+	var popoverTriggerList = [].slice.call(
+		document.querySelectorAll('[data-bs-toggle="popover"]')
+	);
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-		return new bootstrap.Popover(popoverTriggerEl)
-	})
-
-	// Qualifications toggle
-	// const togglerBtns = document.querySelectorAll('.toggler');
-	// togglerBtns.forEach((btn) => {
-	// 	btn.addEventListener('click', (e) => {
-	// 		e.preventDefault();
-	// 		togglerBtns.forEach(i => i.classList.remove('active'));
-	// 		btn.classList.toggle('active');
-	// 	})
-	// });
-
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
 })();
