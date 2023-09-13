@@ -100,7 +100,7 @@
 				}
 
 				&__frame {
-					@include light-bg;
+					border: 2px solid $grayDark;
 					position: absolute;
 					width: 100%;
 					height: 100%;
@@ -115,11 +115,14 @@
 
 					@media (min-width: 1200px) {
 						border-radius: 175px;
+						top: 33px;
+						left: 33px;
 					}
 				}
 
 				&__message {
-					@include light-bg;
+					border: 2px solid $grayDark;
+					background-color: $yellow;
 					position: absolute;
 					width: 156px;
 					height: 40px;
@@ -139,22 +142,22 @@
 
 					@media (min-width: 992px) {
 						position: absolute;
-						width: 40px;
-						height: 40px;
+						width: 44px;
+						height: 44px;
 						bottom: 25px;
 						left: 233px;
 						transform: none;
 						z-index: 1;
 						padding: 8px 0;
-						border-radius: 20px;
-						background-color: $yellowLight;
-						box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+						border-radius: 22px;
+						background-color: $yellow;
+
 						display: flex;
 						align-items: center;
 						justify-content: center;
 
 						p {
-							font-size: 13px;
+							font-size: 16px;
 
 							span {
 								display: none;
@@ -162,21 +165,22 @@
 						}
 
 						&:hover {
-							width: 153px;
+							width: 148px;
 							cursor: default;
 
 							p {
-								font-size: 13px;
 
 								span {
 									display: inline-block;
+									font-size: 12px;
 								}
 							}
 						}
 					}
 
 					@media (min-width: 1200px) {
-						left: 267px;
+						left: 320px;
+						bottom: 8px;
 					}
 				}
 			}
@@ -290,13 +294,14 @@
 
 				&__frame {
 					height: 350px;
+					border: 2px solid #323330;
 					border-radius: 30px;
 					background-image: url('../images/group.gif');
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: center;
 					position: relative;
-					box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+
 
 					&::after {
 						content: "Me with coworkers in Whistler BC, Canada";
@@ -339,7 +344,7 @@
 					}
 
 					&__block {
-						@include light-bg;
+						border: 2px solid $grayDark;
 						border-radius: 15px;
 						padding: 15px 25px;
 						margin-bottom: 15px;
@@ -446,7 +451,7 @@
 			}
 
 			.block {
-				@include light-bg;
+				border: 2px solid $grayDark;
 				padding: 30px;
 				border-radius: 20px;
 				max-width: 500px;
@@ -545,7 +550,7 @@
 			}
 
 			.block {
-				@include light-bg;
+				border: 2px solid $grayDark;
 				padding: 40px 60px;
 				border-radius: 20px;
 				max-width: 500px;
@@ -816,7 +821,7 @@
 		&__body {
 
 			.swiper {
-				box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+
 				border-radius: 20px;
 
 				@media (min-width: 768px) {
@@ -831,14 +836,14 @@
 					}
 
 					.slide-inner {
-						@include light-bg;
+						border: 2px solid $grayDark;
 						box-shadow: none;
 						border-radius: 20px;
 						padding: 30px;
 
 						@media (min-width: 768px) {
 							padding: 40px 60px;
-							box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+
 						}
 
 						&__details {
@@ -963,10 +968,10 @@
 					}
 
 					a {
-						@include light-bg;
+						border: 2px solid $grayDark;
 						border-radius: 15px;
 						margin-bottom: 40px;
-						padding: 100px 0;
+						padding: 113px 0;
 						display: flex;
 						flex-direction: column;
 						align-items: center;
@@ -1012,9 +1017,10 @@
 					.socials {
 
 						a {
-							background-color: $grayDark;
-							border-radius: 12px;
-							padding: 12px 16px;
+							@include btn;
+							//background-color: $grayDark;
+							//border-radius: 12px;
+							//padding: 12px 16px;
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
@@ -1024,8 +1030,7 @@
 							margin-bottom: 16px;
 
 							&:hover {
-								box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
-								transition: all 0.3s ease-in-out;
+								//transition: all 0.3s ease-in-out;
 							}
 
 							.name {

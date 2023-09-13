@@ -80,7 +80,8 @@ h3 {
 	}
 
 	.modal-content {
-		@include light-bg;
+		border: 2px solid $grayDark;
+		background-color: $yellow;
 		border-radius: 15px;
 		padding: 50px 25px 25px 25px;
 
