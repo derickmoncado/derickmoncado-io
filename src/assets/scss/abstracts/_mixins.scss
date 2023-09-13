@@ -28,7 +28,8 @@
 }
 
 @mixin btn {
-	display: inline-block;
+	display: block;
+	text-align: center;
 	margin: 0;
 	padding: 15px 25px;
 	background-color: $grayDark;
@@ -38,6 +39,10 @@
 	text-decoration: none;
 	border-radius: 15px;
 	transition: 0.3s ease-in-out;
+
+	@media (min-width: 768px) {
+		display: inline-block;
+	}
 
 	&:hover {
 		background-color: #000;
