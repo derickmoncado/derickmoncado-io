@@ -481,6 +481,7 @@
 			}
 
 			.block {
+				opacity: 0;
 				border: 2px solid $grayDark;
 				padding: 30px;
 				border-radius: 20px;
@@ -545,6 +546,29 @@
 						}
 					}
 				}
+
+				&[data-emergence="visible"] {
+					animation: fadeIn;
+					animation-duration: 0.5s;
+					animation-fill-mode: both;
+					animation-iteration-count: 1;
+
+					&:nth-child(1) {
+						animation-delay: 0.5s;
+					}
+
+					&:nth-child(2) {
+						animation-delay: 1s;
+					}
+
+					&:nth-child(3) {
+						animation-delay: 1.5s;
+					}
+
+					&:nth-child(4) {
+						animation-delay: 2s;
+					}
+				}
 			}
 		}
 	}
@@ -590,6 +614,7 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
+				opacity: 0;
 
 				@media (min-width: 992px) {
 					padding: 40px 60px;
@@ -648,6 +673,25 @@
 						}
 					}
 				}
+
+				&[data-emergence="visible"] {
+					animation: fadeIn;
+					animation-duration: 0.5s;
+					animation-fill-mode: both;
+					animation-iteration-count: 1;
+
+					&:nth-child(1) {
+						animation-delay: 0.5s;
+					}
+
+					&:nth-child(2) {
+						animation-delay: 1s;
+					}
+
+					&:nth-child(3) {
+						animation-delay: 1.5s;
+					}
+				}
 			}
 		}
 	}
@@ -684,6 +728,14 @@
 
 			&__toggler {
 				margin-bottom: 80px;
+				opacity: 0;
+
+				&[data-emergence="visible"] {
+					animation: fadeInDown;
+					animation-duration: 0.5s;
+					animation-fill-mode: both;
+					animation-iteration-count: 1;
+				}
 
 				ul {
 					display: flex;
@@ -743,6 +795,14 @@
 			}
 
 			&__content {
+				opacity: 0;
+
+				&[data-emergence="visible"] {
+					animation: fadeIn;
+					animation-duration: 0.5s;
+					animation-fill-mode: both;
+					animation-iteration-count: 1;
+				}
 
 				.timeline {
 					max-width: 430px;
@@ -853,6 +913,14 @@
 		}
 
 		&__body {
+			opacity: 0;
+
+			&[data-emergence="visible"] {
+				animation: fadeIn;
+				animation-duration: 0.5s;
+				animation-fill-mode: both;
+				animation-iteration-count: 1;
+			}
 
 			.swiper {
 
@@ -995,6 +1063,14 @@
 				}
 
 				&__email {
+					opacity: 0;
+
+					&[data-emergence="visible"] {
+						animation: fadeInLeft;
+						animation-duration: 0.5s;
+						animation-fill-mode: both;
+						animation-iteration-count: 1;
+					}
 
 					@media (min-width: 1140px) {
 						width: 50%;
@@ -1059,6 +1135,34 @@
 							box-shadow: none;
 							transition: all 0.3s ease-in-out;
 							margin-bottom: 16px;
+							opacity: 0;
+
+							&[data-emergence="visible"] {
+								animation: fadeIn;
+								animation-duration: 0.5s;
+								animation-fill-mode: both;
+								animation-iteration-count: 1;
+
+								&:nth-child(1) {
+									animation-delay: 0.5s;
+								}
+
+								&:nth-child(2) {
+									animation-delay: 1s;
+								}
+
+								&:nth-child(3) {
+									animation-delay: 1.5s;
+								}
+
+								&:nth-child(4) {
+									animation-delay: 2s;
+								}
+
+								&:nth-child(5) {
+									animation-delay: 2.5s;
+								}
+							}
 
 							@media (min-width: 768px) {
 								display: flex;
