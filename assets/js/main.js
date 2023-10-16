@@ -17252,7 +17252,8 @@
 
 	// Init Emergence (emergence.js)
 	emergence.init({
-		elemCushion: 0.75 // toggles class when element is 75% visible
+		elemCushion: 0.75, // toggles class when element is 75% visible
+		reset: false
 	});
 
 	// Init tooltips everywhere (popper.js)
