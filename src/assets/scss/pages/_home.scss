@@ -989,7 +989,23 @@
 								justify-content: center;
 
 								p:first-child {
-									@include subheading(18px);
+
+									a {
+										@include subheading(18px);
+										display: inline-block;
+										position: relative;
+
+										&::after {
+											content: '';
+											height: 16px;
+											width: 16px;
+											position: absolute;
+											right: -20px;
+											background-image: url('../images/bootstrap-icons/box-arrow-in-up-right.svg');
+											background-repeat: no-repeat;
+											background-size: 100%;
+										}
+									}
 								}
 
 								p:last-child {
