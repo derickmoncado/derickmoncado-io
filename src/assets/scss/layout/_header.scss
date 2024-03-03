@@ -51,11 +51,15 @@ header {
                         }
                     }
 
-                    &:last-child {
+                    &#to-snippets {
 
                         .nav-link {
                             @include btn;
                         }
+                    }
+
+                    &#back-to-dm {
+                        display: none;
                     }
                 }
 

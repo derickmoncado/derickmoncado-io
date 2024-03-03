@@ -1,5 +1,42 @@
 /* snippets page styles */
 
-#dm-snippets {
-    border: 5px solid red;
+#snippets {
+    body {
+
+        main {
+
+            header {
+
+                .navbar {
+
+                    .navbar-collapse {
+
+                        .navbar-nav {
+                            align-items: center;
+
+                            .nav-item {
+                                display: none;
+
+                                &#back-to-dm {
+                                    display: block;
+                                }
+
+                                &:last-child {
+                                    display: block;
+
+                                    .nav-link {
+                                        @include btn;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #dm-snippets {
+        background-color: blue;
+    }
 }
