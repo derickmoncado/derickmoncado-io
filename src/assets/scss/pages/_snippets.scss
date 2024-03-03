@@ -41,6 +41,7 @@
     // Snippets section ==========
     #dm-snippets {
         text-align: center;
+        padding: 100px 0;
 
         .dm-snippets-content {
 
@@ -57,7 +58,11 @@
             }
 
             &__body {
-                color: red;
+                text-align: left;
+
+                h4 {
+                    margin-bottom: 15px;
+                }
             }
         }
     }

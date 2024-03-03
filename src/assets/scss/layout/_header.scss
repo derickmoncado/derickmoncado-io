@@ -55,6 +55,15 @@ header {
 
                         .nav-link {
                             @include btn;
+                            padding: 10px 20px;
+                            background: none;
+                            border: 1px solid $grayDark;
+                            color: $grayDark;
+
+                            &:hover {
+                                background: $grayDark;
+                                color: $yellow;
+                            }
                         }
                     }
 
