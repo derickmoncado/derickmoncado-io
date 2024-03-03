@@ -37,6 +37,7 @@
 		});
 	});
 
+	// =============================
 	// Init Swiper (swiper.js)
 	const swiper = new Swiper(".swiper", {
 		loop: true,
@@ -53,12 +54,14 @@
 		}
 	});
 
+	// =============================
 	// Init Emergence (emergence.js)
 	emergence.init({
 		elemCushion: 0.75, // toggles class when element is 75% visible
 		reset: false
 	});
 
+	// =============================
 	// Init tooltips everywhere (popper.js)
 	var popoverTriggerList = [].slice.call(
 		document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -66,4 +69,12 @@
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl);
 	});
+
+	// =============================
+	/* Assign subpage a unique ID */
+	// Get the current page's filename (assuming your pages are in the same directory)
+	var currentPage = window.location.pathname.split("/").pop().split(".")[0];
+
+	// Assign the current page's filename as the HTML ID
+	document.documentElement.id = currentPage;
 })();

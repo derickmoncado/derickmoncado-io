@@ -32,6 +32,7 @@ header {
         .navbar-collapse {
 
             .navbar-nav {
+                align-items: center;
 
                 .nav-item {
 
@@ -47,6 +48,13 @@ header {
 
                         &:hover {
                             cursor: pointer;
+                        }
+                    }
+
+                    &:last-child {
+
+                        .nav-link {
+                            @include btn;
                         }
                     }
                 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="test">
 
   <head>
     <title>Derick Moncado | Front End Dev</title>
@@ -12,7 +12,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- endbuild -->
   </head>
 
   <body>
@@ -48,6 +50,11 @@
       					</li>
       					<li class="nav-item px-2">
       						<a class="nav-link" href="#dm-contact-me">Contact</a>
+      					</li>
+      
+      					<li class="nav-item px-2">
+      						<a class="nav-link" href="/snippets.html" target="_blank">Snippets &nbsp;<i
+      								class="bi bi-box-arrow-up-right"></i></a>
       					</li>
       				</ul>
       			</div>
@@ -960,7 +967,12 @@
       </footer>    </main>
 
     <!-- JS -->
-    <script src="assets/js/main.min.js"></script>
+    <!-- build:js -->
+    <script type="text/javascript" src="assets/js/vendor/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/swiper-bundle.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/emergence.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <!-- endbuild -->
   </body>
 
 </html>
