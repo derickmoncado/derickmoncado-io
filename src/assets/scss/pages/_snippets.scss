@@ -1,6 +1,8 @@
 /* snippets page styles */
 
+// handle differnt header for subpage
 #snippets {
+
     body {
 
         main {
@@ -36,7 +38,27 @@
         }
     }
 
+    // Snippets section ==========
     #dm-snippets {
-        background-color: blue;
+        text-align: center;
+
+        .dm-snippets-content {
+
+            &__heading {
+                margin-bottom: 60px;
+
+                h2 {
+                    @include heading-sm;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            &__body {
+                color: red;
+            }
+        }
     }
 }
