@@ -72,13 +72,16 @@
   /* Fetch GitHub Gists */
 
   const username = "derickmoncado";
+  const snippetsContainer = document.querySelector(".snippet-list");
+  let snippets = [];
 
-  const fetchData = async () => {
+  const fetchSnippets = async () => {
     try {
-      const uri = "https://pokeapi.co/api/v2/pokemon?limit=151";
+      const uri = `https://api.github.com/users/${username}/gists`;
       const res = await fetch(uri);
       const data = await res.json();
-      events = data["results"];
+      snippets = data;
+      console.log("are these them????", snippets);
     } catch (error) {
       console.log(error);
     }
@@ -86,21 +89,19 @@
     let template = "";
     events.forEach(event => {
       template += `
-                <li class="event-item">
-                    <div class="event-body">
-                        <div class="event-body__img">
-                            <img src="${event.image}" alt="Event Image">
-                        </div>
-                        <div class="event-body__details">
-                            <p class="author-date">${event.author}<span>${event.date}</span></p>
-                            <a class="title" href="#">${event.title}</a>
-                            <p class="location">${event.location}</p>
-                        </div>
-                    </div>
-                </li>
+			<li class="snippet">
+				<div class="snippet__description">
+					<h4>.map()</h4>
+					<p>Better than a for loop, creates a new array populated with the results of calling a provided function on every element in the array</p>
+				</div>
+				<div class="snippet__code">
+					<script src="https://gist.github.com/derickmoncado/4261d3e336a1fb637ca0807f45daebf0.js"></script>
+				</div>
+			</li>
             `;
     });
-    eventsContainer.innerHTML = template;
-  }; //fetchData();
+    snippetsContainer.innerHTML = template;
+  };
 
+  fetchSnippets();
 })();
