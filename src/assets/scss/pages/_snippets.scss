@@ -60,27 +60,33 @@
             &__body {
                 text-align: left;
 
-                &__snippet {
+                .snippets {
                     margin-bottom: 60px;
 
-                    &__details {
-                        display: flex;
-                        margin-bottom: 12px;
+                    .snippet-list {
 
-                        h4 {
-                            display: inline-block;
-                        }
+                        .snippet {
 
-                        p {
-                            display: inline-block;
-                            padding: 3px 0 0 25px;
-                            position: relative;
+                            &__description {
+                                display: flex;
+                                margin-bottom: 12px;
 
-                            &::before {
-                                content: '—';
-                                position: absolute;
-                                top: 2px;
-                                left: 4px;
+                                h4 {
+                                    display: inline-block;
+                                }
+
+                                p {
+                                    display: inline-block;
+                                    padding: 3px 0 0 25px;
+                                    position: relative;
+
+                                    &::before {
+                                        content: '—';
+                                        position: absolute;
+                                        top: 2px;
+                                        left: 4px;
+                                    }
+                                }
                             }
                         }
                     }

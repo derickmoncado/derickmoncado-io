@@ -77,4 +77,41 @@
 
 	// Assign the current page's filename as the HTML ID
 	document.documentElement.id = currentPage;
+
+	// =============================
+	/* Fetch GitHub Gists */
+	const username = "derickmoncado";
+
+	const fetchData = async () => {
+		try {
+			const uri = "https://pokeapi.co/api/v2/pokemon?limit=151";
+			const res = await fetch(uri);
+			const data = await res.json();
+			events = data["results"];
+		} catch (error) {
+			console.log(error);
+		}
+
+		let template = "";
+		events.forEach((event) => {
+			template += `
+                <li class="event-item">
+                    <div class="event-body">
+                        <div class="event-body__img">
+                            <img src="${event.image}" alt="Event Image">
+                        </div>
+                        <div class="event-body__details">
+                            <p class="author-date">${event.author}<span>${event.date}</span></p>
+                            <a class="title" href="#">${event.title}</a>
+                            <p class="location">${event.location}</p>
+                        </div>
+                    </div>
+                </li>
+            `;
+		});
+
+		eventsContainer.innerHTML = template;
+	};
+
+	//fetchData();
 })();
