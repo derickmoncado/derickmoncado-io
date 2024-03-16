@@ -108,7 +108,7 @@
 						<p>${snippetDesc}</p>
 					</div>
 					<div class="snippet__code">
-						<script src="https://gist.github.com/derickmoncado/${snippetId}.js"></script>
+						<script src="https://gist.github.com/derickmoncado/c7e44a12893d2712bc75659d0231d9d2.js"></script>
 					</div>
 				</li>
 			`;
