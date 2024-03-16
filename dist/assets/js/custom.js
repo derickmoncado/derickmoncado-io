@@ -100,17 +100,18 @@
       });
       console.log(snippetFilename);
       console.log(snippetDesc);
-      console.log(snippetId); // template += `
-      // 	<li class="snippet">
-      // 		<div class="snippet__description">
-      // 			<h4>.map()</h4>
-      // 			<p>Better than a for loop, creates a new array populated with the results of calling a provided function on every element in the array</p>
-      // 		</div>
-      // 		<div class="snippet__code">
-      // 			<script src="https://gist.github.com/derickmoncado/4261d3e336a1fb637ca0807f45daebf0.js"></script>
-      // 		</div>
-      // 	</li>
-      // `;
+      console.log(snippetId);
+      template += `
+				<li class="snippet">
+					<div class="snippet__description">
+						<h4>${snippetFilename}</h4>
+						<p>${snippetDesc}</p>
+					</div>
+					<div class="snippet__code">
+						<script src="https://gist.github.com/derickmoncado/${snippetId}.js"></script>
+					</div>
+				</li>
+			`;
     });
     snippetsContainer.innerHTML = template;
   };
