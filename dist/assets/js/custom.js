@@ -87,18 +87,30 @@
     }
 
     let template = "";
-    events.forEach(event => {
-      template += `
-			<li class="snippet">
-				<div class="snippet__description">
-					<h4>.map()</h4>
-					<p>Better than a for loop, creates a new array populated with the results of calling a provided function on every element in the array</p>
-				</div>
-				<div class="snippet__code">
-					<script src="https://gist.github.com/derickmoncado/4261d3e336a1fb637ca0807f45daebf0.js"></script>
-				</div>
-			</li>
-            `;
+    snippets.forEach(snippet => {
+      let snippetFilename;
+      let snippetDesc = snippet.description;
+      let snippetId = snippet.id; // Access the files object of each object
+
+      const filesObject = snippet.files; // Iterate over the keys in the files object
+
+      Object.keys(filesObject).forEach(key => {
+        // Get and assign the filename value
+        snippetFilename = filesObject[key].filename;
+      });
+      console.log(snippetFilename);
+      console.log(snippetDesc);
+      console.log(snippetId); // template += `
+      // 	<li class="snippet">
+      // 		<div class="snippet__description">
+      // 			<h4>.map()</h4>
+      // 			<p>Better than a for loop, creates a new array populated with the results of calling a provided function on every element in the array</p>
+      // 		</div>
+      // 		<div class="snippet__code">
+      // 			<script src="https://gist.github.com/derickmoncado/4261d3e336a1fb637ca0807f45daebf0.js"></script>
+      // 		</div>
+      // 	</li>
+      // `;
     });
     snippetsContainer.innerHTML = template;
   };
