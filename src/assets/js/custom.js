@@ -121,7 +121,7 @@
 						<p>${snippetDesc}</p>
 					</div>
 					<div class="snippet__code">
-						<iframe src="https://gist.github.com/derickmoncado/${snippetId}.js"></iframe>
+						<iframe src="https://gist.github.com/derickmoncado/${snippetId}.pibb"></iframe>
 					</div>
 				</li>
 			`;
@@ -132,21 +132,22 @@
 
 	fetchSnippets();
 
-	document.addEventListener("DOMContentLoaded", (event) => {
-		const username = "derickmoncado"; // replace with the username you want
-		const container = document.querySelector(".snippet-list"); // replace with your container
+	// document.addEventListener("DOMContentLoaded", (event) => {
+	// 	const username = "derickmoncado"; // replace with the username you want
+	// 	const container = document.querySelector(".snippet-list"); // replace with your container
 
-		fetch(`https://api.github.com/users/${username}/gists`)
-			.then((response) => response.json())
-			.then((data) => {
-				data.forEach((gist) => {
-					const iframe = document.createElement("iframe");
-					iframe.src = `https://gist.github.com/${username}/${gist.id}.pibb`;
-					iframe.width = "100%";
-					iframe.height = "100%"; // adjust as needed
-					container.appendChild(iframe);
-				});
-			})
-			.catch((error) => console.error("Error:", error));
-	});
+	// 	fetch(`https://api.github.com/users/${username}/gists`)
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			let template = "";
+	// 			data.forEach((gist) => {
+	// 				const iframe = document.createElement("iframe");
+	// 				iframe.src = `https://gist.github.com/${username}/${gist.id}.pibb`;
+	// 				iframe.width = "100%";
+	// 				iframe.height = "100%"; // adjust as needed
+	// 				container.appendChild(iframe);
+	// 			});
+	// 		})
+	// 		.catch((error) => console.error("Error:", error));
+	// });
 })();
