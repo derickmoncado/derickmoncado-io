@@ -90,7 +90,6 @@
 			const res = await fetch(uri);
 			const data = await res.json();
 			snippets = data;
-			console.log("are these them????", snippets);
 		} catch (error) {
 			console.log(error);
 		}
@@ -108,23 +107,22 @@
 			Object.keys(filesObject).forEach((key) => {
 				// Get and assign the filename value
 				snippetFilename = filesObject[key].filename;
+
+				// Add a space after the first instance of "(" in the snippetFilename
+				snippetFilename = snippetFilename.replace("(", "( ");
 			});
 
-			console.log(snippetFilename);
-			console.log(snippetDesc);
-			console.log(snippetId);
-
 			template += `
-				<li class="snippet">
-					<div class="snippet__description">
-						<h4>${snippetFilename}</h4>
-						<p>${snippetDesc}</p>
-					</div>
-					<div class="snippet__code">
-						<iframe src="https://gist.github.com/derickmoncado/${snippetId}.pibb"></iframe>
-					</div>
-				</li>
-			`;
+            <li class="snippet">
+                <div class="snippet__description">
+                    <h4>${snippetFilename}</h4>
+                    <p>${snippetDesc}</p>
+                </div>
+                <div class="snippet__code">
+                    <iframe src="https://gist.github.com/derickmoncado/${snippetId}.pibb"></iframe>
+                </div>
+            </li>
+        `;
 		});
 
 		snippetsContainer.innerHTML = template;
