@@ -103,14 +103,15 @@
 			// Access the files object of each object
 			const filesObject = snippet.files;
 
-			// Iterate over the keys in the files object
+			// Iterate over the keys in the files object and get/assign the filename value
 			Object.keys(filesObject).forEach((key) => {
-				// Get and assign the filename value
 				snippetFilename = filesObject[key].filename;
 
 				// Add a space after the first instance of "(" in the snippetFilename
 				snippetFilename = snippetFilename.replace("(", "( ");
 			});
+
+			console.log(snippetFilename);
 
 			template += `
             <li class="snippet">
