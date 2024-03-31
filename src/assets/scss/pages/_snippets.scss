@@ -58,8 +58,20 @@
             }
 
             &__search {
-                border: 1px solid red;
-                margin-bottom: 60px;
+                margin-bottom: 30px;
+
+                input {
+                    width: 100%;
+                    border: 2px solid $grayDark;
+                    border-radius: 15px;
+                    background: none;
+                    outline: none;
+                    padding: 13px 15px;
+
+                    &::placeholder {
+                        color: $grayDark;
+                    }
+                }
             }
 
             &__body {
