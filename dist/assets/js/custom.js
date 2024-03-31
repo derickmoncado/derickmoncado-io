@@ -94,9 +94,9 @@
       const filesObject = snippet.files; // Iterate over the keys in the files object and get/assign the filename value
 
       Object.keys(filesObject).forEach(key => {
-        snippetFilename = filesObject[key].filename; // Add a space after the first instance of "(" in the snippetFilename
+        snippetFilename = filesObject[key].filename; // Add space and remove ".js" extension from filename
 
-        snippetFilename = snippetFilename.replace("(", "( ");
+        snippetFilename = snippetFilename.replace(").js", " )");
       });
       console.log(snippetFilename);
       template += `

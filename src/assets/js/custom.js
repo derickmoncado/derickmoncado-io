@@ -107,8 +107,8 @@
 			Object.keys(filesObject).forEach((key) => {
 				snippetFilename = filesObject[key].filename;
 
-				// Add a space after the first instance of "(" in the snippetFilename
-				snippetFilename = snippetFilename.replace("(", "( ");
+				// Add space and remove ".js" extension from filename
+				snippetFilename = snippetFilename.replace(").js", " )");
 			});
 
 			console.log(snippetFilename);
