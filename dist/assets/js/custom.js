@@ -85,6 +85,7 @@
       console.log(error);
     }
 
+    console.log(snippets);
     let template = "";
     snippets.forEach(snippet => {
       let snippetFilename;
@@ -98,7 +99,6 @@
 
         snippetFilename = snippetFilename.replace(").js", " )");
       });
-      console.log(snippetFilename);
       template += `
             <li class="snippet">
                 <div class="snippet__description">

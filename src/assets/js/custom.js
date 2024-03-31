@@ -94,6 +94,8 @@
 			console.log(error);
 		}
 
+		console.log(snippets);
+
 		let template = "";
 		snippets.forEach((snippet) => {
 			let snippetFilename;
@@ -110,8 +112,6 @@
 				// Add space and remove ".js" extension from filename
 				snippetFilename = snippetFilename.replace(").js", " )");
 			});
-
-			console.log(snippetFilename);
 
 			template += `
             <li class="snippet">
