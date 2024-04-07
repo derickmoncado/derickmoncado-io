@@ -17234,6 +17234,7 @@
 		});
 	});
 
+	// =============================
 	// Init Swiper (swiper.js)
 	const swiper = new Swiper(".swiper", {
 		loop: true,
@@ -17250,12 +17251,14 @@
 		}
 	});
 
+	// =============================
 	// Init Emergence (emergence.js)
 	emergence.init({
 		elemCushion: 0.75, // toggles class when element is 75% visible
 		reset: false
 	});
 
+	// =============================
 	// Init tooltips everywhere (popper.js)
 	var popoverTriggerList = [].slice.call(
 		document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -17263,6 +17266,67 @@
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl);
 	});
+
+	// =============================
+	/* Assign subpage a unique ID */
+	// Get the current page's filename (assuming your pages are in the same directory)
+	var currentPage = window.location.pathname.split("/").pop().split(".")[0];
+
+	// Assign the current page's filename as the HTML ID
+	document.documentElement.id = currentPage;
+
+	// =============================
+	/* Fetch GitHub Gists */
+	const username = "derickmoncado";
+	const snippetsContainer = document.querySelector(".snippet-list");
+	let snippets = [];
+
+	const fetchSnippets = async () => {
+		try {
+			const uri = `https://api.github.com/users/${username}/gists`;
+			const res = await fetch(uri);
+			const data = await res.json();
+			snippets = data;
+		} catch (error) {
+			console.log(error);
+		}
+
+		console.log(snippets);
+
+		let template = "";
+		snippets.forEach((snippet) => {
+			let snippetFilename;
+			let snippetDesc = snippet.description;
+			let snippetId = snippet.id;
+
+			// Access the files object of each object
+			const filesObject = snippet.files;
+
+			// Iterate over the keys in the files object and get/assign the filename value
+			Object.keys(filesObject).forEach((key) => {
+				snippetFilename = filesObject[key].filename;
+
+				// Add space and remove ".js" extension from filename
+				snippetFilename = snippetFilename.replace(").js", " )");
+			});
+
+			template += `
+            <li class="snippet">
+                <div class="snippet__description">
+                    <h4>${snippetFilename}</h4>
+                    <p>${snippetDesc}</p>
+                </div>
+                <div class="snippet__code">
+                    <iframe src="https://gist.github.com/derickmoncado/${snippetId}.pibb"></iframe>
+                </div>
+            </li>
+        `;
+		});
+
+		snippetsContainer.innerHTML = template;
+	};
+
+	fetchSnippets();
 })();
 
 //# sourceMappingURL=main.js.map
