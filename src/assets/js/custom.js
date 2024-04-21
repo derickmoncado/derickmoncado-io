@@ -79,7 +79,7 @@
 	document.documentElement.id = currentPage;
 
 	// =============================
-	/* Fetch GitHub Gists */
+	/* Fetch GitHub Gists and display on page */
 	const username = "derickmoncado";
 	const snippetsContainer = document.querySelector(".snippet-list");
 	let snippets = [];
@@ -94,8 +94,10 @@
 			console.log(error);
 		}
 
+		// Let's see'em!
 		console.log(snippets);
 
+		// Extract a couple values and then build out our HTML
 		let template = "";
 		snippets.forEach((snippet) => {
 			let snippetFilename;
