@@ -17195,14 +17195,6 @@
 })));
 //# sourceMappingURL=swiper-bundle.js.map
 
-// app.js
-import { greet } from "./greetings.js";
-
-const name = "John";
-const message = greet(name);
-
-console.log(message); // Outputs: Hello, John!
-
 "use strict";
 
 (() => {
@@ -17336,7 +17328,7 @@ console.log(message); // Outputs: Hello, John!
 		snippetsContainer.innerHTML = template;
 	};
 
-	fetchSnippets();
+	//fetchSnippets();
 })();
 
 //# sourceMappingURL=main.js.map
