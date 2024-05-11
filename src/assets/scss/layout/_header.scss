@@ -52,7 +52,7 @@ header {
                     }
 
                     &#to-snippets {
-                        display: none;
+                        //display: none; // show snippets button
 
                         .nav-link {
                             @include btn;
