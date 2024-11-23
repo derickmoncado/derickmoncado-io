@@ -131,5 +131,5 @@
 		snippetsContainer.innerHTML = template;
 	};
 
-	//fetchSnippets();
+	fetchSnippets();
 })();

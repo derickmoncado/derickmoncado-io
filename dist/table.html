@@ -12,7 +12,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- endbuild -->
   </head>
 
   <body>
@@ -64,139 +66,78 @@
       	</nav>
       </header>
       <!-- Body -->
-      <p><img src="/content/dam/atvi/callofduty/cod-touchui/mobile/esports/2024/07/EU-day1-Weapon-Kilo-141-Counter-Cat.png"
-              alt="EU Day 1 image"><img
-              src="/content/dam/atvi/callofduty/cod-touchui/mobile/esports/2024/07/EU-day1-Charm-Worth-The-Weight.png"
-              alt="EU Day 1 image"><img
-              src="/content/dam/atvi/callofduty/cod-touchui/mobile/esports/2024/07/EU-day1-Character-Special-Ops5-Deep-Vein.png"
-              alt="EU Day 1 image"><img
-              src="/content/dam/atvi/callofduty/cod-touchui/mobile/esports/2024/07/EU-day1-Avatar-D-Day.jpg"
-              alt="EU Day 1 image"><br>
-          <br>
-      </p>
-      <table>
-          <tbody>
-              <tr>
-                  <td>
-                      <p>rewards name</p>
-                  </td>
-                  <td>
-                      <p>quality</p>
-                  </td>
-                  <td>
-                      <p>quantity</p>
-                  </td>
-                  <td>
-                      <p>require to watching</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p>credits</p>
-                  </td>
-                  <td>&nbsp;</td>
-                  <td>
-                      <p>200</p>
-                  </td>
-                  <td>
-                      <p>5 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p><a href="https://codm.shotgunstudio.com/detail/Asset/4672">Avatar D Day</a></p>
-                  </td>
-                  <td>
-                      <p>rare</p>
-                  </td>
-                  <td>
-                      <p>1</p>
-                  </td>
-                  <td>
-                      <p>15 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p>credits</p>
-                  </td>
-                  <td>&nbsp;</td>
-                  <td>
-                      <p>200</p>
-                  </td>
-                  <td>
-                      <p>30 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p><a href="https://codm.shotgunstudio.com/detail/Asset/36932">Charm - Worth The Weight</a></p>
-                  </td>
-                  <td>
-                      <p>rare</p>
-                  </td>
-                  <td>
-                      <p>1</p>
-                  </td>
-                  <td>
-                      <p>60 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p>credits</p>
-                  </td>
-                  <td>&nbsp;</td>
-                  <td>
-                      <p>200</p>
-                  </td>
-                  <td>
-                      <p>90 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p><a href="https://codm.shotgunstudio.com/detail/Asset/15152">Character - Special Ops 5 - Deep Vein</a>
-                      </p>
-                  </td>
-                  <td>
-                      <p>rare</p>
-                  </td>
-                  <td>
-                      <p>1</p>
-                  </td>
-                  <td>
-                      <p>120 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p>credits</p>
-                  </td>
-                  <td>&nbsp;</td>
-                  <td>
-                      <p>200</p>
-                  </td>
-                  <td>
-                      <p>150 min</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <p><a href="https://codm.shotgunstudio.com/detail/Asset/3694">Weapon - Kilo 141 Counter Cat</a></p>
-                  </td>
-                  <td>
-                      <p>epic</p>
-                  </td>
-                  <td>
-                      <p>1</p>
-                  </td>
-                  <td>
-                      <p>180 min</p>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
+      <sly data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
+          data-sly-call="${clientLib.all @ categories='atvi.2024.diversity.design.game.mobile'}" />
+      
+      <sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+          data-sly-test.editMode="${wcmmode.edit || wcmmode.disabled}" />
+      
+      <sly data-sly-use.mf="${'/apps/atvi/global/utils/multifield/listCollection.js' @ multifieldName='items'}" />
+      
+      
+      <section class="design-game-m">
+      
+      
+          <div class="container" data-emergence="hidden">
+      
+              <div class="copy-container">
+                  <div class="horizontal_line"></div>
+                  <div class="flex-header-sub">
+                      <div class="flex-text-sub">
+                      </div>
+      
+                  </div>
+                  <h3>INCLUSIVE GAME DESIGN IN ACTION</h3>
+                  <p>Our studios take pride in representing authentic and representative characters in our games. As a
+                      business,
+                      we have committed to creating Inclusive Game Design Ambassadors,
+                      provide formal gaming accessibility training opportunities, and representation and media impact
+                      workshops
+                      for our game creatives to participate in.</p>
+              </div>
+      
+      
+              <div class="image-container">
+      
+      
+      
+                  <div class="image-slide">
+                      <img src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/S3_Alejandro.png"
+                          alt="Image 1">
+                  </div>
+                  <div class="image-slide">
+                      <img src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/Reveal_Screens_09.jpg"
+                          alt="Image 2">
+                  </div>
+      
+                  <div class="image-slide">
+                      <img src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/july-updates/catbat.jpg"
+                          alt="Image 2">
+                  </div>
+      
+      
+      
+                  <div class="image-slide">
+                      <img src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/General_Action_Hotel.png"
+                          alt="Image 2">
+                  </div>
+      
+                  <div class="image-slide">
+                      <img src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/july-updates/tawna.jpg"
+                          alt="Image 2">
+                  </div>
+      
+      
+      
+                  <div class="image-slide">
+                      <img src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/Reveal_Screens_10.jpg"
+                          alt="Image 2">
+                  </div>
+      
+              </div>
+          </div>
+      
+      </section>
 
       <!-- Footer -->
       <footer>
@@ -208,7 +149,62 @@
       </footer>    </main>
 
     <!-- JS -->
-    <script src="assets/js/main.min.js"></script>
+    <!-- build:js -->
+    <script type="text/javascript" src="assets/js/vendor/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/swiper-bundle.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/emergence.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <!-- endbuild -->
   </body>
 
 </html>
+
+
+
+<section class="accessibility">
+  <div class="container" data-emergence="hidden">
+    <div class="copy-container">
+      <div class="horizontal_line"></div>
+      <div class="flex-header-sub">
+        <div class="flex-text-sub">
+        </div>
+
+      </div>
+      <h3>ACCESSIBILITY IN OUR GAMES</h3>
+      <p>At Activision, we strive to make great games – for all.
+        Our passion for inclusion extends to the craft and care we put into making our games accessible.
+        Through a variety of accessibility features - such as robust subtitles, flexible color vision deficiency
+        filters,
+        and bespoke controller options - we aim to welcome all players to enjoy the epic gaming experiences our company
+        has to offer.</p>
+
+      <div class=button>
+        <a href="https://newsroom.activisionblizzard.com/p/we-believe-gaming-is-for-everyone/" target="_blank">Learn
+          More</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="image-slide">
+        <img
+          src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/Call_of_Duty®__Modern_Warfare_II_20221209102006.jpg"
+          alt="Image 1">
+      </div>
+      <div class="image-slide">
+        <img
+          src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/Call_of_Duty®__Modern_Warfare_II_20221209101958.jpg"
+          alt="Image 2">
+      </div>
+      <div class="image-slide">
+        <img
+          src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/Call_of_Duty®__Modern_Warfare_II_20221209102027.jpg"
+          alt="Image 3">
+      </div>
+      <div class="image-slide">
+        <img
+          src="/content/dam/atvi/activision/atvi-touchui/activision/company/2023/2023-diversity/Call_of_Duty®__Modern_Warfare_II_20221209102101.jpg"
+          alt="Image 3">
+      </div>
+    </div>
+  </div>
+
+</section>
