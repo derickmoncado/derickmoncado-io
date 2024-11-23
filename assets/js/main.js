@@ -17328,7 +17328,7 @@
 		snippetsContainer.innerHTML = template;
 	};
 
-	//fetchSnippets();
+	fetchSnippets();
 })();
 
 //# sourceMappingURL=main.js.map
