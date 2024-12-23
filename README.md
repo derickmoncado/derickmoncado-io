@@ -1,3 +1,3 @@
-![My new personal sites homepage](https://github.com/derickmoncado/derickmoncado-io/blob/main/src/assets/images/dm-io-home.jpg)
+# Now deprecated 🚨
 
-# My new personal website, spring 2023
+## My personal website, spring 2023
