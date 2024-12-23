@@ -1,3 +1,1 @@
-# Now deprecated 🚨
-
-## My personal website, spring 2023
+# reworking for 2025
