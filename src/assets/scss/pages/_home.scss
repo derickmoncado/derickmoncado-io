@@ -1,11 +1,51 @@
 /* Home Page */
 
+// Intro joke ==========
+#dm-joke {
+	height: calc(100vh - 90px);
+	padding: 120px 0;
+	position: relative;
+
+	.container-sm {
+		height: 100%;
+	}
+
+	.dm-joke-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		&__punchline {
+			text-align: center;
+		}
+	}
+
+	.scroll-down {
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 60px;
+
+		p {
+			color: $grayDark;
+			text-align: center;
+
+			i {
+				display: block;
+				font-size: 24px;
+			}
+		}
+	}
+}
+
 // Hero section ==========
 #dm-hero {
 	padding: 40px 0;
 
 	@media (min-width: 768px) {
-		height: calc(100vh - 90px)
+		height: calc(100vh - 90px);
 	}
 
 	@media (min-width: 992px) {
@@ -237,24 +277,6 @@
 			a {
 				@include btn();
 			}
-		}
-	}
-
-	.scroll-down {
-		display: none;
-		position: absolute;
-		bottom: 100px;
-
-		p {
-			color: $grayDark;
-
-			i {
-				display: inline-block;
-			}
-		}
-
-		@media (min-width: 768px) {
-			display: block;
 		}
 	}
 }
