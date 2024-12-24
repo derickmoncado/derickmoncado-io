@@ -1,10 +1,38 @@
 /* Home Page */
 
+@function repeat-string($string, $times) {
+	$result: '';
+
+	@for $i from 1 through $times {
+		$result: #{$result}#{$string};
+	}
+
+	@return $result;
+}
+
 // Intro joke ==========
 #dm-joke {
 	height: calc(100vh - 90px);
 	padding: 120px 0;
 	position: relative;
+
+	&::before {
+		content: "#{repeat-string('fold line - ', 100)}";
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		width: 100%;
+		height: 20px;
+		background-color: $grayDark;
+		color: $yellow;
+		display: flex;
+		align-items: center;
+		font-style: italic;
+		font-weight: 600;
+		font-size: 12px;
+		overflow: hidden;
+		white-space: nowrap;
+	}
 
 	.container-sm {
 		height: 100%;
