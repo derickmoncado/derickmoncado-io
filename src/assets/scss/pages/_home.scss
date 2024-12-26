@@ -70,14 +70,14 @@
 
 // Hero section ==========
 #dm-hero {
-	padding: 40px 0;
+	padding: 250px 0;
 
 	@media (min-width: 768px) {
-		height: calc(100vh - 90px);
+		//height: calc(100vh - 90px);
 	}
 
 	@media (min-width: 992px) {
-		padding: 120px 0;
+		padding: 500px 0;
 		position: relative;
 	}
 
@@ -113,41 +113,41 @@
 				position: static;
 			}
 
-			&__socials {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				left: 0;
+			// &__socials {
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	transform: translateY(-50%);
+			// 	left: 0;
 
-				@media (min-width: 992px) {
-					left: 95%;
-				}
+			// 	@media (min-width: 992px) {
+			// 		left: 95%;
+			// 	}
 
-				@media (min-width: 1200px) {
-					left: -125px;
-				}
+			// 	@media (min-width: 1200px) {
+			// 		left: -125px;
+			// 	}
 
-				ul {
+			// 	ul {
 
-					li {
+			// 		li {
 
-						a {
-							display: inline-block;
-							padding: 5px;
-							font-size: 18px;
-							color: $grayDark;
+			// 			a {
+			// 				display: inline-block;
+			// 				padding: 5px;
+			// 				font-size: 18px;
+			// 				color: $grayDark;
 
-							&:hover {
+			// 				&:hover {
 
-								i {
-									color: lighten($grayDark, 20%);
-									transition: all 0.3s ease-in-out;
-								}
-							}
-						}
-					}
-				}
-			}
+			// 					i {
+			// 						color: lighten($grayDark, 20%);
+			// 						transition: all 0.3s ease-in-out;
+			// 					}
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
 
 			&__pic {
 				display: inline-block;
@@ -192,13 +192,13 @@
 					border: 2px solid $grayDark;
 					background-color: $yellow;
 					position: absolute;
-					width: 156px;
+					width: max-content;
 					height: 40px;
 					bottom: -10px;
 					left: 50%;
 					transform: translateX(-50%);
 					z-index: 1;
-					padding: 8px 0;
+					padding: 12px;
 					border-radius: 20px;
 					display: flex;
 					align-items: center;
@@ -255,17 +255,18 @@
 		}
 
 		&__details {
+			text-align: center;
 
 			@media (min-width: 768px) {
-				width: 74%;
+				//width: 74%;
 			}
 
 			@media (min-width: 992px) {
-				width: 55%;
+				text-align: left;
 			}
 
 			&>span {
-				font-size: 48px;
+				@include subheading(22px);
 			}
 
 			h1 {
@@ -274,19 +275,22 @@
 
 			p:first-of-type {
 				@include subheading(22px);
-				position: relative;
 				padding-left: 75px;
 				margin-bottom: 20px;
+				position: relative;
 
-				&::before {
-					content: '';
-					height: 2px;
-					width: 55px;
-					position: absolute;
-					left: 5px;
-					top: 50%;
-					transform: translateY(-50%);
-					background-color: $grayDark;
+				@media (min-width: 768px) {
+
+					&::before {
+						content: '';
+						height: 2px;
+						width: 55px;
+						position: absolute;
+						left: 5px;
+						top: 50%;
+						transform: translateY(-50%);
+						background-color: $grayDark;
+					}
 				}
 
 				span {
