@@ -53,6 +53,32 @@
 	}
 }
 
+@mixin btn-secondary() {
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 15px 25px;
+	background-color: $yellow;
+	border: 2px solid $grayDark;
+	font-size: 18px;
+	font-family: inherit;
+	color: $grayDark;
+	text-decoration: none;
+	border-radius: 30px;
+	transition: 0.3s ease-in-out;
+
+	@media (min-width: 992px) {
+		display: inline-block;
+	}
+
+	&:hover {
+		background-color: $grayDark;
+		color: $yellow;
+		box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+		transition: 0.3s ease-in-out;
+	}
+}
+
 @mixin sm-container {
 	max-width: 992px;
 	margin: 0 auto;

@@ -58,7 +58,7 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 40px;
+		bottom: 50px;
 
 		p {
 			color: $grayDark;
@@ -67,7 +67,7 @@
 
 			i {
 				display: block;
-				font-size: 24px;
+				font-size: 36px;
 			}
 		}
 	}
@@ -289,7 +289,7 @@
 			}
 
 			.bi-arrow-down-short {
-				font-size: 24px;
+				font-size: 36px;
 
 				@media (min-width: 992px) {
 					display: block;
@@ -313,7 +313,7 @@
 
 		h2 {
 			@include heading-sm;
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 		}
 
 		ul {
@@ -372,18 +372,18 @@
 				margin-bottom: 60px;
 				opacity: 0;
 
+				@media (min-width: 992px) {
+					margin: 0;
+					width: 50%;
+					text-align: left;
+				}
+
 				&[data-emergence="visible"] {
 					animation: fadeInLeft;
 					animation-duration: 0.5s;
 					animation-delay: 0s;
 					animation-fill-mode: both;
 					animation-iteration-count: 1;
-				}
-
-				@media (min-width: 992px) {
-					margin: 0;
-					width: 50%;
-					text-align: left;
 				}
 
 				&__frame {
@@ -416,7 +416,7 @@
 
 					@media (min-width: 992px) {
 						width: 88%;
-						height: 350px;
+						height: 100%;
 					}
 				}
 			}
@@ -427,56 +427,37 @@
 				@media (min-width: 992px) {
 					width: 50%;
 					text-align: left;
+					order: 1;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
 				}
 
-				&__blocks {
+				ul {
 					margin-bottom: 45px;
 
 					@media (min-width: 576px) {
 						display: flex;
-						justify-content: space-between;
+						justify-content: center;
+						gap: 40px;
+						margin-bottom: 0;
 					}
 
-					&__block {
-						border: 2px solid $grayDark;
-						border-radius: 15px;
-						padding: 15px 25px;
-						margin-bottom: 15px;
+					li {
+						margin-bottom: 30px;
 						opacity: 0;
-
-						&[data-emergence="visible"] {
-							animation: fadeIn;
-							animation-duration: 0.5s;
-							animation-fill-mode: both;
-							animation-iteration-count: 1;
-
-							&:nth-child(1) {
-								animation-delay: 0.5s;
-							}
-
-							&:nth-child(2) {
-								animation-delay: 1s;
-							}
-
-							&:nth-child(3) {
-								animation-delay: 1.5s;
-							}
-						}
-
-
-						@media (min-width: 576px) {
-							width: 33%;
-							margin: 0 15px;
-						}
-
-						@media (min-width: 992px) {
-							width: 31%;
-							margin: 0;
-							text-align: center;
-						}
+						text-align: center;
 
 						i {
-							font-size: 22px;
+							display: inline-block;
+							font-size: 18px;
+							padding: 10px;
+							border: 2px solid $grayDark;
+							color: $grayDark;
+							width: 50px;
+							height: 50px;
+							border-radius: 50%;
+							margin-bottom: 10px;
 						}
 
 						p:first-of-type {
@@ -487,18 +468,38 @@
 							font-size: 12px;
 							color: $yellowDark;
 						}
+
+						&[data-emergence="visible"] {
+							animation: fadeIn;
+							animation-duration: 0.3s;
+							animation-fill-mode: both;
+							animation-iteration-count: 1;
+
+							&:nth-child(1) {
+								animation-delay: 0.3s;
+							}
+
+							&:nth-child(2) {
+								animation-delay: 0.6s;
+							}
+
+							&:nth-child(3) {
+								animation-delay: 0.9s;
+							}
+						}
 					}
 				}
 
 				&>p {
-					margin-bottom: 60px;
+					margin-bottom: 80px;
 					position: relative;
 
 					@media (min-width: 992px) {
-						margin-bottom: 30px;
+						margin-bottom: 80px;
 					}
 
 					button {
+						display: inline-block;
 						background: none;
 						border: none;
 						position: absolute;
@@ -509,19 +510,42 @@
 						text-decoration: underline;
 
 						@media (min-width: 992px) {
-							left: auto;
-							right: -20px;
-							bottom: -5px;
+							left: -11px;
+							bottom: -42px;
 							transform: none;
 						}
 					}
 				}
 
-				a {
-					@include btn;
+				&__ctas {
 
-					i {
-						padding-left: 10px;
+					@media (min-width: 992px) {
+						display: flex;
+					}
+
+					.cta-1,
+					.cta-2 {
+
+						@media (min-width: 992px) {
+							width: 50%;
+						}
+
+						i {
+							padding-left: 10px;
+						}
+					}
+
+					.cta-1 {
+						@include btn;
+						margin: 0 0 20px 0;
+
+						@media (min-width: 992px) {
+							margin: 0 10px 0 0;
+						}
+					}
+
+					.cta-2 {
+						@include btn-secondary;
 					}
 				}
 			}
