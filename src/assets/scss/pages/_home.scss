@@ -279,7 +279,7 @@
 			}
 
 			a {
-				@include btn();
+				@include btn;
 				margin-bottom: 50px;
 
 				@media (min-width: 992px) {
@@ -580,6 +580,7 @@
 // Qualifications section ==========
 #dm-qualifications {
 	text-align: center;
+	padding: 500px 0;
 
 	.dm-qualifications-content {
 
@@ -765,6 +766,7 @@
 // About Me section ==========
 #dm-testimonials {
 	text-align: center;
+	padding: 500px 0;
 
 	.dm-testimonials-content {
 
@@ -919,6 +921,7 @@
 // Contact Me section ==========
 #dm-contact-me {
 	text-align: center;
+	padding: 500px 0;
 
 	.dm-contact-me-content {
 
@@ -934,133 +937,90 @@
 
 			&__inner {
 
-				@media (min-width: 1140px) {
-					display: flex;
+				@media (min-width: 576px) {
+					width: 520px;
+					margin: 0 auto;
 				}
 
-				&__email {
-					opacity: 0;
-
-					&[data-emergence="visible"] {
-						animation: fadeInLeft;
-						animation-duration: 0.5s;
-						animation-fill-mode: both;
-						animation-iteration-count: 1;
-					}
-
-					@media (min-width: 1140px) {
-						width: 50%;
-						padding-right: 25px;
-					}
+				.socials {
 
 					a {
-						border: 2px solid $grayDark;
-						border-radius: 15px;
-						margin-bottom: 40px;
-						padding: 113px 0;
+						@include btn-secondary;
 						display: flex;
-						flex-direction: column;
+						justify-content: space-between;
 						align-items: center;
 						text-decoration: none;
+						box-shadow: none;
+						transition: all 0.3s ease-in-out;
+						margin-bottom: 16px;
+						opacity: 0;
 
-						&>i {
-							font-size: 32px;
-							color: $grayDark;
+						@media (min-width: 768px) {
+							display: flex;
 						}
 
-						p {
-							margin-bottom: 20px;
-							@include subheading(18px);
-							transform: translateX(0px);
-							transition: transform 0.3s ease-in-out;
+						.name {
+							color: $grayDark;
 
-							&:last-child {
-								margin: 0;
-								@include subheading(16px);
+							i {
+								color: $grayDark;
+								display: inline-block;
+								margin-right: 10px;
 							}
+						}
+
+						.description {
+							font-size: 12px;
+							color: $yellowDark;
+							font-style: italic;
 						}
 
 						&:hover {
-
-							p {
-
-								&:last-child {
-									transform: translateX(8px);
-									transition: transform 0.3s ease-in-out;
-								}
-							}
-						}
-					}
-				}
-
-				&__socials {
-
-					@media (min-width: 1140px) {
-						width: 50%;
-						padding-left: 25px;
-					}
-
-					.socials {
-
-						a {
-							@include btn;
-							display: flex;
-							justify-content: space-between;
-							align-items: center;
-							text-decoration: none;
-							box-shadow: none;
-							transition: all 0.3s ease-in-out;
-							margin-bottom: 16px;
-							opacity: 0;
-
-							&[data-emergence="visible"] {
-								animation: fadeIn;
-								animation-duration: 0.5s;
-								animation-fill-mode: both;
-								animation-iteration-count: 1;
-
-								&:nth-child(1) {
-									animation-delay: 0.5s;
-								}
-
-								&:nth-child(2) {
-									animation-delay: 1s;
-								}
-
-								&:nth-child(3) {
-									animation-delay: 1.5s;
-								}
-
-								&:nth-child(4) {
-									animation-delay: 2s;
-								}
-
-								&:nth-child(5) {
-									animation-delay: 2.5s;
-								}
-							}
-
-							@media (min-width: 768px) {
-								display: flex;
-							}
 
 							.name {
 								color: $yellow;
 
 								i {
 									color: $yellow;
-									display: inline-block;
-									margin-right: 10px;
 								}
-
-							}
-
-							.description {
-								font-size: 12px;
-								color: $yellowDark;
 							}
 						}
+
+						&[data-emergence="visible"] {
+							animation: fadeIn;
+							animation-duration: 0.3s;
+							animation-fill-mode: both;
+							animation-iteration-count: 1;
+
+							&:nth-child(1) {
+								animation-delay: 0.3s;
+							}
+
+							&:nth-child(2) {
+								animation-delay: 0.6s;
+							}
+
+							&:nth-child(3) {
+								animation-delay: 0.9s;
+							}
+
+							&:nth-child(4) {
+								animation-delay: 1.2s;
+							}
+
+							&:nth-child(5) {
+								animation-delay: 1.5s;
+							}
+						}
+
+						&.email {
+							@include btn;
+						}
 					}
+
+					// &>a:first-child {
+					// 	background-color: red;
+					// }
 				}
 			}
 		}
