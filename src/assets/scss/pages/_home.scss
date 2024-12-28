@@ -304,7 +304,7 @@
 }
 
 
-// About Me section ==========
+// Follow Me section ==========
 #dm-follow-me {
 	text-align: center;
 	padding: 500px 0;
@@ -624,7 +624,7 @@
 							border: 2px solid $grayDark;
 							outline: none;
 							width: 150px;
-							padding: 8px 6px;
+							padding: 15px 6px;
 							transition: all 0.3s ease-in-out;
 
 							@media (min-width: 576px) {
@@ -655,14 +655,14 @@
 						}
 
 						#experienceTab {
-							border-top-left-radius: 15px;
-							border-bottom-left-radius: 15px;
+							border-top-left-radius: 30px;
+							border-bottom-left-radius: 30px;
 							border-right-width: 1px;
 						}
 
 						#learningTab {
-							border-top-right-radius: 15px;
-							border-bottom-right-radius: 15px;
+							border-top-right-radius: 30px;
+							border-bottom-right-radius: 30px;
 							border-left-width: 1px;
 						}
 					}
@@ -703,6 +703,7 @@
 							padding-bottom: 30px;
 
 							&:first-child {
+								text-align: right;
 								padding-right: 15px;
 								border-right: 2px solid $grayDark;
 
