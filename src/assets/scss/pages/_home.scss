@@ -785,7 +785,7 @@
 			// }
 
 			.swiper {
-				border-radius: 20px;
+				border-radius: 30px;
 
 				@media (min-width: 768px) {
 					padding: 0 0 60px 0;
@@ -800,7 +800,7 @@
 
 					.slide-inner {
 						border: 2px solid $grayDark;
-						border-radius: 20px;
+						border-radius: 30px;
 						padding: 30px;
 						box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
 
@@ -824,21 +824,26 @@
 									background-repeat: no-repeat;
 									background-size: contain;
 									border: 2px solid $grayDark;
+									box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.4);
+
+									&.shawn {
+										background-image: url('../images/shawn.jpeg');
+									}
 
 									&.evan {
-										background-image: url('../images/evan.jpg');
+										background-image: url('../images/evan.jpeg');
 									}
 
 									&.corbin {
-										background-image: url('../images/corbin.jpg');
+										background-image: url('../images/corbin.jpeg');
 									}
 
 									&.jason {
-										background-image: url('../images/jason.jpg');
+										background-image: url('../images/jason.jpeg');
 									}
 
 									&.michael {
-										background-image: url('../images/michael.jpg');
+										background-image: url('../images/michael.jpeg');
 									}
 								}
 							}
