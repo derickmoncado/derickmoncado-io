@@ -260,14 +260,6 @@
 						background-color: $grayDark;
 					}
 				}
-
-				span {
-					display: none;
-
-					@media (min-width: 500px) {
-						display: inline-block;
-					}
-				}
 			}
 
 			p:last-of-type {
