@@ -565,6 +565,43 @@
 }
 
 
+// About Me section ==========
+#dm-recent-content {
+	text-align: center;
+	padding: 500px 0;
+
+	.dm-recent-content {
+
+		&__heading {
+			margin-bottom: 60px;
+
+			h2 {
+				@include heading-sm;
+			}
+		}
+
+		&__body {
+
+			&__details {
+				text-align: center;
+
+				h3 {
+					@include subheading(22px);
+					font-style: normal;
+					margin-bottom: 40px;
+				}
+
+				#iframe {
+					border: 1px solid $grayDark;
+					padding: 100px;
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+}
+
+
 // Qualifications section ==========
 #dm-qualifications {
 	text-align: center;
