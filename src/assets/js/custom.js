@@ -131,5 +131,86 @@
 		snippetsContainer.innerHTML = template;
 	};
 
-	fetchSnippets();
+	//fetchSnippets();
+
+	// =============================
+	// Fetch and display Youtube data
+	const API_KEY = "AIzaSyCLtOJRx0fbTBdyDZz1Xs5oeZcsBKxkUA8"; // API key
+	const CHANNEL_ID = "UC_DJjEMnbmiFHfQS5oxZ1Ug"; // YouTube channel ID
+
+	const fetchLatestVideo = async () => {
+		console.log("Fetching latest video...");
+		try {
+			const channelRes = await fetch(
+				`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${API_KEY}`
+			);
+			const channelData = await channelRes.json();
+			const uploadsPlaylistId =
+				channelData?.items?.[0]?.contentDetails?.relatedPlaylists
+					?.uploads;
+
+			if (!uploadsPlaylistId)
+				throw new Error("Could not retrieve uploads playlist.");
+
+			const videoRes = await fetch(
+				`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=1&key=${API_KEY}`
+			);
+			const videoData = await videoRes.json();
+			const video = videoData?.items?.[0]?.snippet;
+
+			if (!video) throw new Error("No video found.");
+
+			document.querySelector("#video-container").innerHTML = `
+                <h3>${video.title}</h3>
+                <iframe src="https://www.youtube.com/embed/${video.resourceId.videoId}" frameborder="0" allowfullscreen></iframe>
+            `;
+		} catch (error) {
+			console.error("Error fetching latest video:", error);
+		}
+	};
+
+	const fetchSubscriberCount = async () => {
+		console.log("Fetching subscriber count...");
+		try {
+			const res = await fetch(
+				`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`
+			);
+			const data = await res.json();
+			const subscriberCount =
+				data?.items?.[0]?.statistics?.subscriberCount;
+
+			document.querySelector(
+				"#subscriber-count"
+			).textContent = `Subscribers: ${subscriberCount ?? "N/A"}`;
+		} catch (error) {
+			console.error("Error fetching subscriber count:", error);
+		}
+	};
+
+	const loadYouTubeSubscribeButton = () => {
+		const subscribeButtonDiv = document.querySelector("#subscribe-button");
+
+		// Insert the subscribe button div
+		subscribeButtonDiv.innerHTML = `
+			<div class="g-ytsubscribe" data-channelid="${CHANNEL_ID}" data-layout="default" data-count="hidden"></div>
+		`;
+
+		// Remove any existing script to prevent duplicate loading
+		const existingScript = document.querySelector(
+			"script[src='https://apis.google.com/js/platform.js']"
+		);
+		if (existingScript) existingScript.remove();
+
+		// Create and insert a new script tag
+		const script = document.createElement("script");
+		script.src = "https://apis.google.com/js/platform.js";
+		script.async = true;
+		script.defer = true;
+		document.body.appendChild(script);
+	};
+
+	// Fetch data when the page loads
+	fetchLatestVideo();
+	fetchSubscriberCount();
+	loadYouTubeSubscribeButton();
 })();
