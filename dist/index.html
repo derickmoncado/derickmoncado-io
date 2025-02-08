@@ -12,7 +12,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- endbuild -->
   </head>
 
   <body>
@@ -254,7 +256,13 @@
       					<!-- media dynamically injected via JS and YouTube API -->
       					<div id="video-container"></div>
       					<div id="subscriber-container">
-      						<div id="subscribe-button"></div>
+      						<div id="subscribe-button">
+      							<a href="https://www.youtube.com/@derickmoncado" target="_blank"
+      								title="Derick Moncado's YouTube channel'">
+      								<span>view channel</span><i class="bi bi-youtube"></i>
+      							</a>
+      						</div>
+      						<div id="subscriber-count"></div>
       					</div>
       
       				</div>
@@ -667,7 +675,12 @@
       </footer>    </main>
 
     <!-- JS -->
-    <script src="assets/js/main.min.js"></script>
+    <!-- build:js -->
+    <script type="text/javascript" src="assets/js/vendor/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/swiper-bundle.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/emergence.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <!-- endbuild -->
   </body>
 
 </html>
