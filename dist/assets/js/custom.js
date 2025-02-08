@@ -142,26 +142,34 @@
     } catch (error) {
       console.error("Error fetching latest video:", error);
     }
-  };
+  }; // const fetchSubscriberCount = async () => {
+  // 	console.log("Fetching subscriber count...");
+  // 	try {
+  // 		const res = await fetch(
+  // 			`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`
+  // 		);
+  // 		const data = await res.json();
+  // 		const subscriberCount =
+  // 			data?.items?.[0]?.statistics?.subscriberCount;
+  // 		document.querySelector(
+  // 			"#subscriber-count"
+  // 		).textContent = `Subscribers: ${subscriberCount ?? "N/A"}`;
+  // 	} catch (error) {
+  // 		console.error("Error fetching subscriber count:", error);
+  // 	}
+  // };
 
-  const fetchSubscriberCount = async () => {
-    console.log("Fetching subscriber count...");
-
-    try {
-      const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`);
-      const data = await res.json();
-      const subscriberCount = data?.items?.[0]?.statistics?.subscriberCount;
-      document.querySelector("#subscriber-count").textContent = `Subscribers: ${subscriberCount ?? "N/A"}`;
-    } catch (error) {
-      console.error("Error fetching subscriber count:", error);
-    }
-  };
 
   const loadYouTubeSubscribeButton = () => {
     const subscribeButtonDiv = document.querySelector("#subscribe-button"); // Insert the subscribe button div
 
     subscribeButtonDiv.innerHTML = `
-			<div class="g-ytsubscribe" data-channelid="${CHANNEL_ID}" data-layout="default" data-count="hidden"></div>
+			<div class="g-ytsubscribe" 
+				data-channelid="${CHANNEL_ID}" 
+				data-layout="default" 
+				data-count="default" 
+				data-theme="dark">
+			</div>
 		`; // Remove any existing script to prevent duplicate loading
 
     const existingScript = document.querySelector("script[src='https://apis.google.com/js/platform.js']");
@@ -175,7 +183,7 @@
   }; // Fetch data when the page loads
 
 
-  fetchLatestVideo();
-  fetchSubscriberCount();
+  fetchLatestVideo(); //fetchSubscriberCount();
+
   loadYouTubeSubscribeButton();
 })();
