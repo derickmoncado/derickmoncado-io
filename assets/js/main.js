@@ -17366,55 +17366,54 @@
 		}
 	};
 
-	// const fetchSubscriberCount = async () => {
-	// 	console.log("Fetching subscriber count...");
-	// 	try {
-	// 		const res = await fetch(
-	// 			`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`
-	// 		);
-	// 		const data = await res.json();
-	// 		const subscriberCount =
-	// 			data?.items?.[0]?.statistics?.subscriberCount;
+	const fetchSubscriberCount = async () => {
+		console.log("Fetching subscriber count...");
+		try {
+			const res = await fetch(
+				`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`
+			);
+			const data = await res.json();
+			const subscriberCount =
+				data?.items?.[0]?.statistics?.subscriberCount;
 
-	// 		document.querySelector(
-	// 			"#subscriber-count"
-	// 		).textContent = `Subscribers: ${subscriberCount ?? "N/A"}`;
-	// 	} catch (error) {
-	// 		console.error("Error fetching subscriber count:", error);
-	// 	}
-	// };
-
-	const loadYouTubeSubscribeButton = () => {
-		const subscribeButtonDiv = document.querySelector("#subscribe-button");
-
-		// Insert the subscribe button div
-		subscribeButtonDiv.innerHTML = `
-			<div class="g-ytsubscribe" 
-				data-channelid="${CHANNEL_ID}" 
-				data-layout="default" 
-				data-count="default" 
-				data-theme="dark">
-			</div>
-		`;
-
-		// Remove any existing script to prevent duplicate loading
-		const existingScript = document.querySelector(
-			"script[src='https://apis.google.com/js/platform.js']"
-		);
-		if (existingScript) existingScript.remove();
-
-		// Create and insert a new script tag
-		const script = document.createElement("script");
-		script.src = "https://apis.google.com/js/platform.js";
-		script.async = true;
-		script.defer = true;
-		document.body.appendChild(script);
+			document.querySelector(
+				"#subscriber-count"
+			).textContent = `Subscribers: ${subscriberCount ?? "N/A"}`;
+		} catch (error) {
+			console.error("Error fetching subscriber count:", error);
+		}
 	};
+
+	// const loadYouTubeSubscribeButton = () => {
+	// 	const subscribeButtonDiv = document.querySelector("#subscribe-button");
+
+	// 	subscribeButtonDiv.innerHTML = `
+	// 		<div class="g-ytsubscribe"
+	// 			data-channelid="${CHANNEL_ID}"
+	// 			data-layout="default"
+	// 			data-count="default"
+	// 			data-theme="dark">
+	// 		</div>
+	// 	`;
+
+	// 	const existingScript = document.querySelector(
+	// 		"script[src='https://apis.google.com/js/platform.js']"
+	// 	);
+	// 	if (existingScript) existingScript.remove();
+
+	// 	setTimeout(() => {
+	// 		const script = document.createElement("script");
+	// 		script.src = "https://apis.google.com/js/platform.js";
+	// 		script.async = true;
+	// 		script.defer = true;
+	// 		document.body.appendChild(script);
+	// 	}, 500);
+	// };
 
 	// Fetch data when the page loads
 	fetchLatestVideo();
-	//fetchSubscriberCount();
-	loadYouTubeSubscribeButton();
+	fetchSubscriberCount();
+	//loadYouTubeSubscribeButton();
 })();
 
 //# sourceMappingURL=main.js.map
