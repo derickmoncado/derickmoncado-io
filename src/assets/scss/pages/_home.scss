@@ -230,10 +230,15 @@
 
 			h1 {
 				@include heading;
+				font-size: 44px;
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
 				top: -450px;
+
+				@media (min-width: 576px) {
+					font-size: auto;
+				}
 
 				@media (min-width: 992px) {
 					position: static;
